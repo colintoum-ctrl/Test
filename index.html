@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>TC La Châtaigneraie — Tennis &amp; Padel · Rueil-Malmaison</title>
-<meta name="description" content="7 courts couverts, 4 pistes de padel, école de tennis, fitness, club house. À Rueil-Malmaison. Là où les champions s'entraînent."/>
+<meta name="description" content="7 courts couverts, 4 pistes de padel, école de tennis, fitness, club house. À Rueil-Malmaison. Là où les champions s'entraînent depuis 1963."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -17,20 +17,39 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-vignette"></div>
+  <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
-    <div class="hero-tagline">Fondé en 1963 · Rueil-Malmaison · Hauts-de-Seine</div>
-    <h1>Bienvenue à<br/><em>La Châtaigneraie</em></h1>
-    <p class="hero-sub">Un lieu d'exception pour tous les passionnés de tennis et padel depuis 1963.</p>
-    <div class="hero-actions">
-      <button class="btn btn-clay btn-lg" onclick="mo('booking')">Réserver un terrain</button>
-      <a href="#club" class="btn btn-outline-w btn-lg">Découvrir le club ↓</a>
-    </div>
-    <div class="hero-numbers">
-      <div class="hn"><div class="hn-n">7</div><div class="hn-l">Courts tennis couverts</div></div>
-      <div class="hn"><div class="hn-n">4</div><div class="hn-l">Pistes padel indoor</div></div>
-      <div class="hn"><div class="hn-n">60+</div><div class="hn-l">Ans d'excellence</div></div>
-      <div class="hn"><div class="hn-n">7j/7</div><div class="hn-l">8h – 23h</div></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-label">Fondé en 1963 · Rueil-Malmaison · Hauts-de-Seine</div>
+        <h1>BIENVENUE À<br/><em>LA CHÂTAIGNERAIE</em></h1>
+        <p class="hero-sub">Un lieu d'exception pour tous les passionnés de tennis et padel depuis plus de 60 ans.</p>
+        <div class="hero-actions">
+          <button class="btn btn-clay btn-lg" onclick="mo('booking')">Réserver un terrain</button>
+          <a href="#club" class="btn btn-ghost btn-lg">Découvrir le club ↓</a>
+        </div>
+      </div>
+      <div class="hero-stats-panel">
+        <div class="hsp-item">
+          <div class="hsp-n">7</div>
+          <div class="hsp-l">Courts tennis<br/>couverts</div>
+        </div>
+        <div class="hsp-sep"></div>
+        <div class="hsp-item">
+          <div class="hsp-n">4</div>
+          <div class="hsp-l">Pistes padel<br/>indoor</div>
+        </div>
+        <div class="hsp-sep"></div>
+        <div class="hsp-item">
+          <div class="hsp-n">60+</div>
+          <div class="hsp-l">Ans<br/>d'excellence</div>
+        </div>
+        <div class="hsp-sep"></div>
+        <div class="hsp-item">
+          <div class="hsp-n">7j/7</div>
+          <div class="hsp-l">8h – 23h<br/>toute l'année</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="hero-scroll">
@@ -39,26 +58,26 @@
   </div>
 </section>
 
-<!-- STRIP -->
-<div class="strip">
+<!-- NAV STRIP -->
+<div class="nav-strip">
   <div class="wrap">
-    <a href="tennis.html" class="si">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
+    <a href="tennis.html" class="ns-item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20M12 2a14.5 14.5 0 010 20M2 12h20"/></svg>
       Tennis
     </a>
-    <a href="padel.html" class="si">
+    <a href="padel.html" class="ns-item">
       <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
       Padel
     </a>
-    <a href="installations.html" class="si">
+    <a href="installations.html" class="ns-item">
       <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       Installations
     </a>
-    <a href="tarifs.html" class="si">
+    <a href="tarifs.html" class="ns-item">
       <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
       Tarifs
     </a>
-    <a href="#" class="si" onclick="mo('b2b');return false">
+    <a href="#" class="ns-item" onclick="mo('b2b');return false">
       <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
       Entreprises
     </a>
@@ -68,27 +87,46 @@
 <!-- QUI SOMMES-NOUS -->
 <section class="sec" id="club">
   <div class="wrap">
-    <div class="about-wrap">
-      <div class="about-img-col">
+    <div class="about-layout">
+      <div class="about-media">
         <div class="about-photo">
           <div class="about-photo-caption">Courts couverts en terre battue · Rueil-Malmaison</div>
         </div>
-        <div class="about-float">
-          <div class="about-float-n">1963</div>
-          <div class="about-float-l">Fondé en</div>
+        <div class="about-badge">
+          <div class="ab-n">1963</div>
+          <div class="ab-l">Fondé en</div>
+        </div>
+        <div class="about-mini">
+          <div class="am-item">
+            <div class="am-n">+1000</div>
+            <div class="am-l">Membres</div>
+          </div>
+          <div class="am-sep"></div>
+          <div class="am-item">
+            <div class="am-n">Top 5</div>
+            <div class="am-l">Clubs IDF</div>
+          </div>
+          <div class="am-sep"></div>
+          <div class="am-item">
+            <div class="am-n">20 min</div>
+            <div class="am-l">De Paris</div>
+          </div>
         </div>
       </div>
       <div>
         <span class="eyebrow">Qui sommes-nous</span>
         <h2 class="serif fs-lg" style="margin-bottom:6px">Une institution sportive<br/>au cœur de l'Ouest Parisien.</h2>
-        <p class="body-text" style="font-size:1rem;margin-bottom:16px">
+        <div class="about-pull">
+          "Là où les champions s'entraînent depuis plus de 60 ans."
+        </div>
+        <p class="body-text" style="font-size:.95rem;margin-bottom:16px">
           Depuis plus de 60 ans, le Tennis Club de la Châtaigneraie accueille les passionnés de tennis et de padel dans un cadre verdoyant à Rueil-Malmaison, à seulement 20 minutes du centre de Paris.
         </p>
-        <p class="body-text" style="font-size:1rem;margin-bottom:28px">
-          Avec <strong style="color:var(--dark);font-weight:600">7 courts de tennis couverts en terre battue</strong>, <strong style="color:var(--dark);font-weight:600">4 pistes de padel indoor</strong>, une école de tennis, un espace fitness, un club house et un restaurant panoramique — La Châtaigneraie n'est pas un club comme les autres. C'est un lieu de vie, ouvert 7j/7 de 8h à 23h.
+        <p class="body-text" style="font-size:.95rem;margin-bottom:28px">
+          Avec <strong style="color:var(--text);font-weight:600">7 courts de tennis couverts en terre battue</strong>, <strong style="color:var(--text);font-weight:600">4 pistes de padel indoor</strong>, une école de tennis, un espace fitness, un club house et un restaurant panoramique — La Châtaigneraie n'est pas un club comme les autres. C'est un lieu de vie, ouvert 7j/7 de 8h à 23h.
         </p>
         <div class="stars-trained">
-          <h4>⭐ Les champions y ont joué</h4>
+          <div class="stars-label">⭐ Les champions y ont joué</div>
           <div class="stars-list">
             <span class="star-chip">Serena Williams</span>
             <span class="star-chip">Venus Williams</span>
@@ -97,18 +135,23 @@
             <span class="star-chip">Joueurs ATP &amp; WTA</span>
           </div>
         </div>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn btn-clay" onclick="mo('membre')">Devenir membre</button>
+          <a href="installations.html" class="btn btn-outline">Découvrir les espaces →</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DÉCOUVREZ NOS INSTALLATIONS -->
+<!-- NOS INSTALLATIONS -->
 <section class="sec bg-off">
   <div class="wrap">
-    <span class="eyebrow">Nos espaces</span>
-    <h2 class="serif fs-lg" style="max-width:560px;margin-bottom:8px">Découvrez nos<br/>installations.</h2>
-    <p class="body-text" style="max-width:560px;margin-bottom:0">Un complexe sportif complet couvert toute l'année, pensé pour l'excellence.</p>
-
+    <div style="max-width:600px">
+      <span class="eyebrow">Nos espaces</span>
+      <h2 class="serif fs-lg" style="margin-bottom:8px">Découvrez nos<br/>installations.</h2>
+      <p class="body-text" style="margin-bottom:0">Un complexe sportif complet couvert toute l'année, pensé pour l'excellence et le plaisir.</p>
+    </div>
     <div class="preview-grid">
       <a href="tennis.html" class="preview-card">
         <div class="pc-img">
@@ -125,7 +168,7 @@
       </a>
       <a href="padel.html" class="preview-card">
         <div class="pc-img">
-          <div class="pc-img-bg" style="background:url('https://images.unsplash.com/2ovB_R7TOWM?w=800&fit=crop&q=80') center/cover no-repeat,linear-gradient(155deg,#1e1e22,#2e2e32)"></div>
+          <div class="pc-img-bg" style="background:url('https://images.unsplash.com/2ovB_R7TOWM?w=800&fit=crop&q=80') center/cover no-repeat,linear-gradient(155deg,#1e1e22,#2e2e36)"></div>
           <div class="pc-over">
             <h3>4 Pistes Padel</h3>
             <p>Indoor · Court central panoramique</p>
@@ -141,7 +184,7 @@
           <div class="pc-img-bg" style="background:url('https://images.unsplash.com/XKimW0pke6w?w=800&fit=crop&q=80') center/cover no-repeat,linear-gradient(155deg,#1e2820,#2e3c30)"></div>
           <div class="pc-over">
             <h3>Fitness &amp; Club House</h3>
-            <p>Cardio · Musculation · Restaurant</p>
+            <p>Cardio · Musculation · Restaurant panoramique</p>
           </div>
         </div>
         <div class="pc-body">
@@ -153,7 +196,7 @@
   </div>
 </section>
 
-<!-- ÉVÉNEMENTS À VENIR -->
+<!-- ÉVÉNEMENTS -->
 <section class="sec">
   <div class="wrap">
     <div class="ev-header">

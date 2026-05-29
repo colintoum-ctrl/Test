@@ -1,11 +1,27 @@
-/* ── COMPONENTS ─────────────────────────────────── */
+/* ── SHARED COMPONENTS ───────────────────────────── */
 
 const TOPBAR = `
-<div class="topbar"><div class="wrap"><div class="tb-l">
-  <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Rueil-Malmaison (92) · 20 min de Paris</span>
-  <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Ouvert 7j/7 · 8h – 23h</span>
-  <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.16 12 19.79 19.79 0 011.1 3.38 2 2 0 013.09 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>01 47 51 XX XX</span>
-</div><div class="tb-r"><a href="https://instagram.com/lachataigneraietennispadel" class="tb-ig" target="_blank" rel="noopener">📸 @lachataigneraietennispadel</a></div></div></div>`;
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l">
+      <span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Rueil-Malmaison (92) · 20 min de Paris
+      </span>
+      <span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Ouvert 7j/7 · 8h – 23h
+      </span>
+      <span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.16 12 19.79 19.79 0 011.1 3.38 2 2 0 013.09 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        01 47 51 XX XX
+      </span>
+    </div>
+    <div class="tb-r">
+      <a href="https://instagram.com/lachataigneraietennispadel" class="tb-ig" target="_blank" rel="noopener">📸 @lachataigneraietennispadel</a>
+    </div>
+  </div>
+</div>`;
 
 const NAVBAR = `
 <nav class="navbar" id="nav">
@@ -22,7 +38,7 @@ const NAVBAR = `
         <rect x="5" y="5" width="90" height="90" rx="16" fill="#475569" mask="url(#lm)"/>
         <circle cx="76" cy="73" r="5.5" fill="white"/>
       </svg>
-      <div>
+      <div class="logo-text">
         <div class="logo-name">La Châtaigneraie</div>
         <div class="logo-sub">Tennis &amp; Padel · Rueil-Malmaison</div>
       </div>
@@ -36,8 +52,8 @@ const NAVBAR = `
       <li><a href="actualites.html" data-nav="actualites">Actualités</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="tarifs.html" class="btn btn-outline">Nos tarifs</a>
-      <button class="btn btn-clay" onclick="mo('booking')">Réserver</button>
+      <a href="tarifs.html" class="btn btn-outline btn-sm">Tarifs</a>
+      <button class="btn btn-clay btn-sm" onclick="mo('booking')">Réserver</button>
     </div>
     <button class="burger" id="brgr" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -51,7 +67,7 @@ const NAVBAR = `
     <a href="evenements.html" data-nav="evenements">Événements</a>
     <a href="actualites.html" data-nav="actualites">Actualités</a>
     <a href="tarifs.html" data-nav="tarifs">Tarifs &amp; Abonnements</a>
-    <button class="btn btn-clay" onclick="mo('booking')">Réserver un terrain</button>
+    <button class="btn btn-clay" onclick="mo('booking')" style="margin-top:4px">Réserver un terrain</button>
   </div>
 </nav>`;
 
@@ -77,7 +93,7 @@ const FOOTER_HTML = `
             <small>Tennis &amp; Padel · Depuis 1963</small>
           </div>
         </div>
-        <p class="f-desc">Lieu de vie Sport &amp; Lifestyle premium de l'Ouest Parisien. 7 courts de tennis couverts, 4 pistes de padel indoor, restaurant panoramique, fitness, club house. Ouvert 7j/7.</p>
+        <p class="f-desc">Lieu de vie Sport &amp; Lifestyle premium de l'Ouest Parisien. 7 courts de tennis couverts, 4 pistes de padel indoor, restaurant panoramique, fitness, club house. Ouvert 7j/7 de 8h à 23h.</p>
         <div class="f-soc">
           <a href="https://instagram.com/lachataigneraietennispadel" target="_blank" rel="noopener" title="Instagram">📸</a>
           <a href="#" title="TikTok">🎵</a>
@@ -91,7 +107,7 @@ const FOOTER_HTML = `
           <li><a href="index.html">Accueil</a></li>
           <li><a href="tennis.html">Tennis</a></li>
           <li><a href="padel.html">Padel</a></li>
-          <li><a href="installations.html">Toutes nos installations</a></li>
+          <li><a href="installations.html">Installations</a></li>
           <li><a href="evenements.html">Événements</a></li>
           <li><a href="actualites.html">Actualités</a></li>
           <li><a href="tarifs.html">Tarifs</a></li>
@@ -104,7 +120,7 @@ const FOOTER_HTML = `
           <br/>
           <div><strong>Samedi – Dimanche</strong><br/>8h00 – 23h00</div>
           <br/>
-          <div style="color:rgba(255,255,255,.25);font-size:.75rem">Jours fériés : 9h00 – 21h00</div>
+          <div style="color:rgba(255,255,255,.22);font-size:.73rem">Jours fériés : 9h00 – 21h00</div>
         </div>
       </div>
       <div class="f-col">
@@ -124,19 +140,17 @@ const FOOTER_HTML = `
           <a href="#"><span class="f-contact-icon">📍</span>Rueil-Malmaison (92500)<br/>Hauts-de-Seine</a>
           <a href="tel:+33147510000"><span class="f-contact-icon">📞</span>01 47 51 XX XX</a>
           <a href="mailto:contact@lachataigneraietennispadel.com"><span class="f-contact-icon">✉️</span>contact@lachataigneraietennispadel.com</a>
-          <a href="mailto:b2b@lachataigneraietennispadel.com"><span class="f-contact-icon">🏢</span>b2b@lachataigneraietennispadel.com</a>
           <a href="https://instagram.com/lachataigneraietennispadel" target="_blank" rel="noopener"><span class="f-contact-icon">📸</span>@lachataigneraietennispadel</a>
         </div>
-        <button class="btn btn-clay" style="width:100%;justify-content:center;margin-top:18px;font-size:.84rem" onclick="mo('booking')">Réserver maintenant</button>
+        <button class="btn btn-clay" style="width:100%;justify-content:center;margin-top:18px;font-size:.82rem" onclick="mo('booking')">Réserver maintenant</button>
       </div>
     </div>
     <div class="f-bot">
       <span>© 2026 Tennis Club de la Châtaigneraie · Tous droits réservés</span>
       <div class="f-bot-links">
         <a href="#">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
+        <a href="#">Confidentialité</a>
         <a href="#">CGU</a>
-        <a href="#">Plan du site</a>
       </div>
     </div>
   </div>
@@ -160,7 +174,7 @@ const MODALS_HTML = `
     </div>
     <div class="fg"><label>E-mail</label><input type="email" placeholder="prenom.nom@email.com"/></div>
     <button class="btn btn-clay" style="width:100%;justify-content:center;padding:14px;margin-top:4px">Vérifier les disponibilités →</button>
-    <p class="modal-note">Paiement sécurisé en ligne · CB, PayPal</p>
+    <p class="modal-note">Paiement sécurisé · CB, PayPal, Chèques vacances</p>
   </div>
 </div>
 
@@ -191,7 +205,7 @@ const MODALS_HTML = `
     <button class="modal-x" onclick="mc('resto')">✕</button>
     <div class="modal-emo">🍽️</div>
     <h2>Réserver une table</h2>
-    <p class="sub">Restaurant panoramique ouvert 7j/7, déjeuner et dîner. Vue sur les courts.</p>
+    <p class="sub">Restaurant panoramique ouvert 7j/7. Vue sur les courts, déjeuner et dîner.</p>
     <div class="fg-row">
       <div class="fg"><label>Date</label><input type="date"/></div>
       <div class="fg"><label>Couverts</label><select><option>1 – 2</option><option>3 – 4</option><option>5 – 8</option><option>Groupe (+8)</option></select></div>
@@ -236,11 +250,11 @@ const MODALS_HTML = `
     <div class="fg"><label>Formule</label><select><option>Essential — 420 €/an</option><option>Premium — 780 €/an ⭐</option><option>Corporate — Sur devis</option></select></div>
     <div class="fg"><label>Activité principale</label><select><option>Tennis</option><option>Padel</option><option>Tennis &amp; Padel</option><option>Fitness uniquement</option></select></div>
     <button class="btn btn-clay" style="width:100%;justify-content:center;padding:14px">Commencer mon inscription →</button>
-    <p class="modal-note">Notre équipe vous contactera pour finaliser votre adhésion sous 48h.</p>
+    <p class="modal-note">Notre équipe vous contactera sous 48h pour finaliser votre adhésion.</p>
   </div>
 </div>`;
 
-/* ── INJECT COMPONENTS ───────────────────────────── */
+/* ── INJECT ──────────────────────────────────────── */
 document.getElementById('header').innerHTML = TOPBAR + NAVBAR;
 document.getElementById('footer').innerHTML = FOOTER_HTML;
 document.getElementById('modals').innerHTML = MODALS_HTML;
@@ -251,28 +265,43 @@ document.querySelectorAll('[data-nav]').forEach(a =>
   a.classList.toggle('on', a.dataset.nav === page)
 );
 
-/* ── NAVBAR SCROLL SHADOW ────────────────────────── */
+/* ── SCROLL SHADOW ───────────────────────────────── */
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav?.classList.toggle('up', scrollY > 20));
+window.addEventListener('scroll', () =>
+  nav?.classList.toggle('scrolled', scrollY > 24)
+, {passive:true});
 
 /* ── BURGER ──────────────────────────────────────── */
-const brgr = document.getElementById('brgr'), drwr = document.getElementById('drwr');
+const brgr = document.getElementById('brgr');
+const drwr = document.getElementById('drwr');
 brgr?.addEventListener('click', () => drwr?.classList.toggle('open'));
-drwr?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drwr.classList.remove('open')));
+drwr?.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => drwr.classList.remove('open'))
+);
 
 /* ── MODALS ──────────────────────────────────────── */
-function mo(id){document.getElementById('m-'+id)?.classList.add('on');document.body.style.overflow='hidden'}
-function mc(id){document.getElementById('m-'+id)?.classList.remove('on');document.body.style.overflow=''}
-function oc(e,id){if(e.target===document.getElementById('m-'+id))mc(id)}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.ov.on').forEach(el=>el.classList.remove('on'));document.body.style.overflow=''}});
+function mo(id){ document.getElementById('m-'+id)?.classList.add('on'); document.body.style.overflow='hidden' }
+function mc(id){ document.getElementById('m-'+id)?.classList.remove('on'); document.body.style.overflow='' }
+function oc(e,id){ if(e.target===document.getElementById('m-'+id)) mc(id) }
+document.addEventListener('keydown', e => {
+  if(e.key==='Escape'){
+    document.querySelectorAll('.ov.on').forEach(el=>el.classList.remove('on'));
+    document.body.style.overflow='';
+  }
+});
 
 /* ── DATE INPUTS ─────────────────────────────────── */
-const t = new Date().toISOString().split('T')[0];
-document.querySelectorAll('input[type=date]').forEach(el=>{el.value=t;el.min=t});
+const today = new Date().toISOString().split('T')[0];
+document.querySelectorAll('input[type=date]').forEach(el => {
+  el.value = today;
+  el.min = today;
+});
 
 /* ── FAQ ACCORDION ───────────────────────────────── */
 document.querySelectorAll('.faq-item').forEach(item => {
   item.querySelector('.faq-q')?.addEventListener('click', () => {
-    item.classList.toggle('open');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
   });
 });
