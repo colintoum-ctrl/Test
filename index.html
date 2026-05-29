@@ -154,10 +154,9 @@ button{font-family:inherit;cursor:pointer}
 }
 /* Court texture + overlay */
 .hero-bg{
-  position:absolute;inset:0;opacity:.55;
+  position:absolute;inset:0;opacity:.75;
   background:
-    repeating-linear-gradient(90deg,transparent 0,transparent 74px,rgba(255,255,255,.04) 74px,rgba(255,255,255,.04) 76px),
-    repeating-linear-gradient(0deg,transparent 0,transparent 50px,rgba(255,255,255,.03) 50px,rgba(255,255,255,.03) 52px),
+    url('https://images.unsplash.com/J5D8cdRWwEk?w=1400&fit=crop&q=80') center/cover no-repeat,
     linear-gradient(160deg,#c07040 0%,#9a4822 35%,#7a3015 60%,#3a1408 100%);
 }
 .hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(28,28,30,.2) 0%,rgba(28,28,30,.8) 100%)}
@@ -219,7 +218,8 @@ button{font-family:inherit;cursor:pointer}
 .about-photo{
   width:100%;aspect-ratio:3/4;border-radius:var(--r16);overflow:hidden;
   background:
-    linear-gradient(180deg,rgba(28,28,30,.15),rgba(28,28,30,.6)),
+    linear-gradient(180deg,rgba(28,28,30,.15),rgba(28,28,30,.55)),
+    url('https://images.unsplash.com/og1bOpwzftM?w=800&fit=crop&q=80') center/cover no-repeat,
     linear-gradient(155deg,#c07040 0%,#9a4822 40%,#6a2c12 100%);
   display:flex;align-items:flex-end;padding:24px;
   box-shadow:var(--s4);
@@ -279,11 +279,11 @@ p.about-body{font-size:1rem;color:var(--mid);line-height:1.8}
 .ec-img-inner{position:absolute;inset:0;transition:transform var(--ease)}
 .espace-card:hover .ec-img-inner{transform:scale(1.06)}
 
-.ec-tennis{background:linear-gradient(155deg,#c07040 0%,#9a4822 40%,#6a2c12 100%)}
-.ec-padel{background:linear-gradient(155deg,#1e1e22 0%,#2e2e32 60%)}
-.ec-house{background:linear-gradient(155deg,#2a2028 0%,#3a3040 60%)}
-.ec-school{background:linear-gradient(155deg,#1a2830 0%,#2a3c48 60%)}
-.ec-fitness{background:linear-gradient(155deg,#1e2820 0%,#2e3c30 60%)}
+.ec-tennis{background:url('https://images.unsplash.com/msx3rGYfOEc?w=800&fit=crop&q=80') center/cover no-repeat,linear-gradient(155deg,#c07040 0%,#9a4822 40%,#6a2c12 100%)}
+.ec-padel{background:url('https://images.unsplash.com/2ovB_R7TOWM?w=800&fit=crop&q=80') center/cover no-repeat,linear-gradient(155deg,#1e1e22 0%,#2e2e32 60%)}
+.ec-house{background:url('https://images.unsplash.com/PoN2Wt2Raco?w=800&fit=crop&q=80') center/cover no-repeat,linear-gradient(155deg,#2a2028 0%,#3a3040 60%)}
+.ec-school{background:url('https://images.unsplash.com/w6OlsN11hLk?w=800&fit=crop&q=80') center/cover no-repeat,linear-gradient(155deg,#1a2830 0%,#2a3c48 60%)}
+.ec-fitness{background:url('https://images.unsplash.com/XKimW0pke6w?w=800&fit=crop&q=80') center/cover no-repeat,linear-gradient(155deg,#1e2820 0%,#2e3c30 60%)}
 .ec-resto{background:linear-gradient(155deg,#28201a 0%,#3c3028 60%)}
 
 .ec-num{
@@ -320,7 +320,8 @@ p.about-body{font-size:1rem;color:var(--mid);line-height:1.8}
   border-radius:var(--r16);overflow:hidden;box-shadow:var(--s2);
 }
 .ff-photo{
-  min-height:360px;background:linear-gradient(155deg,#1c1e20 0%,#2e3a2c 100%);
+  min-height:360px;
+  background:url('https://images.unsplash.com/XKimW0pke6w?w=800&fit=crop&q=80') center/cover no-repeat, linear-gradient(155deg,#1c1e20 0%,#2e3a2c 100%);
   display:flex;align-items:flex-end;padding:28px;position:relative;overflow:hidden;
 }
 .ff-photo-bg{
@@ -691,8 +692,8 @@ footer{background:var(--dark);padding:72px 0 0}
       </span>
     </div>
     <div class="tb-r">
-      <a href="https://instagram.com/tcchataigneraie" class="tb-ig" target="_blank" rel="noopener">
-        📸 @tcchataigneraie
+      <a href="https://instagram.com/lachataigneraietennispadel" class="tb-ig" target="_blank" rel="noopener">
+        📸 @lachataigneraietennispadel
       </a>
     </div>
   </div>
@@ -702,10 +703,10 @@ footer{background:var(--dark);padding:72px 0 0}
 <nav class="navbar" id="nav">
   <div class="wrap">
     <a href="#accueil" class="logo">
-      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M30 8C21 8 14 14.5 14 23s7 15 16 15" stroke="#C06632" stroke-width="3.2" stroke-linecap="round" fill="none"/>
-        <path d="M18 40C27 40 34 33.5 34 25S27 10 18 10" stroke="#1c1c1e" stroke-width="3.2" stroke-linecap="round" fill="none"/>
-        <circle cx="24" cy="24" r="2.5" fill="#C06632" opacity=".6"/>
+      <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs><mask id="lm"><rect width="100" height="100" fill="white"/><rect x="19" y="19" width="45" height="62" rx="10" fill="black"/><rect x="64" y="19" width="36" height="40" fill="black"/></mask></defs>
+        <rect x="6" y="6" width="88" height="88" rx="16" fill="#475569" mask="url(#lm)"/>
+        <circle cx="76" cy="72" r="6" fill="white"/>
       </svg>
       <div>
         <div class="logo-name">La Châtaigneraie</div>
@@ -751,8 +752,8 @@ footer{background:var(--dark);padding:72px 0 0}
   <div class="hero-vignette"></div>
   <div class="wrap hero-inner">
     <div class="hero-tagline">Fondé en 1963 · Rueil-Malmaison · Hauts-de-Seine</div>
-    <h1>Là où les<br/><em>champions</em><br/>s'entraînent.</h1>
-    <p class="hero-sub">Un lieu d'exception pour tous les passionnés de tennis et padel depuis 60 ans.</p>
+    <h1>Bienvenue à<br/><em>La Châtaigneraie</em></h1>
+    <p class="hero-sub">Un lieu d'exception pour tous les passionnés de tennis et padel depuis 1963.</p>
     <div class="hero-actions">
       <button class="btn btn-clay btn-lg" onclick="mo('booking')">Réserver un terrain</button>
       <a href="#club" class="btn btn-outline-w btn-lg">Découvrir le club</a>
@@ -1093,29 +1094,29 @@ footer{background:var(--dark);padding:72px 0 0}
     <div class="price-strip">
       <div class="pc">
         <div class="pc-icon">🎾</div>
-        <h4>Tennis · Creux</h4>
-        <div class="pc-slot">Lun–Ven · 8h–17h</div>
+        <h4>Tennis</h4>
+        <div class="pc-slot">Lun – Ven · 8h – 17h</div>
         <div class="pc-price">40€</div>
         <div class="pc-unit">par 1h30</div>
       </div>
       <div class="pc">
         <div class="pc-icon">🎾</div>
-        <h4>Tennis · Plein</h4>
-        <div class="pc-slot">Soirs &amp; week-ends</div>
+        <h4>Tennis</h4>
+        <div class="pc-slot">Lun–Ven 17h–23h · Sam–Dim 8h–23h</div>
         <div class="pc-price">60€</div>
         <div class="pc-unit">par 1h30</div>
       </div>
       <div class="pc">
         <div class="pc-icon">🏓</div>
-        <h4>Padel · Creux</h4>
-        <div class="pc-slot">Lun–Ven · 8h–17h</div>
+        <h4>Padel</h4>
+        <div class="pc-slot">Lun – Ven · 8h – 17h</div>
         <div class="pc-price">50€</div>
         <div class="pc-unit">par 1h30</div>
       </div>
       <div class="pc">
         <div class="pc-icon">🏓</div>
-        <h4>Padel · Plein</h4>
-        <div class="pc-slot">Soirs &amp; week-ends</div>
+        <h4>Padel</h4>
+        <div class="pc-slot">Lun–Ven 17h–23h · Sam–Dim 8h–23h</div>
         <div class="pc-price">90€</div>
         <div class="pc-unit">par 1h30</div>
       </div>
@@ -1130,7 +1131,7 @@ footer{background:var(--dark);padding:72px 0 0}
         <p class="plan-hook">"Idéal pour jouer 2 à 3 fois par mois en toute liberté."</p>
         <div class="plan-price"><span class="big">420€</span><span class="per">/an</span></div>
         <ul class="plan-feats">
-          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès courts heures creuses</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès courts Lun–Ven 8h–17h</li>
           <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Réservation jusqu'à 3j à l'avance</li>
           <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>10 % de réduction restaurant</li>
           <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès vestiaires premium</li>
@@ -1225,9 +1226,9 @@ footer{background:var(--dark);padding:72px 0 0}
     <div class="insta-header">
       <span class="eyebrow">Suivez-nous</span>
       <h2 class="serif fs-lg" style="margin-bottom:10px">La Châtaigneraie<br/>en coulisses.</h2>
-      <a href="https://instagram.com/tcchataigneraie" target="_blank" rel="noopener" class="insta-handle">
+      <a href="https://instagram.com/lachataigneraietennispadel" target="_blank" rel="noopener" class="insta-handle">
         <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        @tcchataigneraie
+        @lachataigneraietennispadel
       </a>
       <p class="insta-desc">Matchs, coulisses, événements, tips tennis &amp; padel — suivez toute la vie du club sur Instagram.</p>
     </div>
@@ -1252,8 +1253,8 @@ footer{background:var(--dark);padding:72px 0 0}
     </div>
 
     <div class="social-row">
-      <a href="https://instagram.com/tcchataigneraie" target="_blank" rel="noopener" class="soc-btn">📸 Instagram · @tcchataigneraie</a>
-      <a href="#" class="soc-btn">🎵 TikTok · @tcchataigneraie</a>
+      <a href="https://instagram.com/lachataigneraietennispadel" target="_blank" rel="noopener" class="soc-btn">📸 Instagram · @lachataigneraietennispadel</a>
+      <a href="#" class="soc-btn">🎵 TikTok · @lachataigneraietennispadel</a>
       <a href="#" class="soc-btn">💼 LinkedIn · TC La Châtaigneraie</a>
       <a href="#" class="soc-btn">👥 Facebook · TC La Châtaigneraie</a>
     </div>
@@ -1296,9 +1297,10 @@ footer{background:var(--dark);padding:72px 0 0}
       <!-- Brand -->
       <div class="f-brand">
         <div class="f-logo">
-          <svg viewBox="0 0 48 48" fill="none">
-            <path d="M30 8C21 8 14 14.5 14 23s7 15 16 15" stroke="#C06632" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <path d="M18 40C27 40 34 33.5 34 25S27 10 18 10" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs><mask id="fm"><rect width="100" height="100" fill="white"/><rect x="19" y="19" width="45" height="62" rx="10" fill="black"/><rect x="64" y="19" width="36" height="40" fill="black"/></mask></defs>
+            <rect x="6" y="6" width="88" height="88" rx="16" fill="rgba(255,255,255,0.25)" mask="url(#fm)"/>
+            <circle cx="76" cy="72" r="6" fill="rgba(255,255,255,0.4)"/>
           </svg>
           <div>
             <strong>La Châtaigneraie</strong>
@@ -1307,7 +1309,7 @@ footer{background:var(--dark);padding:72px 0 0}
         </div>
         <p class="f-desc">Lieu de vie Sport &amp; Lifestyle premium de l'Ouest Parisien. 7 courts de tennis couverts, 4 pistes de padel indoor, restaurant panoramique, fitness, club house. Ouvert 7j/7.</p>
         <div class="f-soc">
-          <a href="https://instagram.com/tcchataigneraie" target="_blank" rel="noopener" title="Instagram @tcchataigneraie">📸</a>
+          <a href="https://instagram.com/lachataigneraietennispadel" target="_blank" rel="noopener" title="Instagram @lachataigneraietennispadel">📸</a>
           <a href="#" title="TikTok">🎵</a>
           <a href="#" title="LinkedIn">💼</a>
           <a href="#" title="Facebook">👥</a>
@@ -1360,9 +1362,9 @@ footer{background:var(--dark);padding:72px 0 0}
         <div class="f-contact">
           <a href="#"><span class="f-contact-icon">📍</span>Rueil-Malmaison (92500)<br/>Hauts-de-Seine</a>
           <a href="tel:+33147510000"><span class="f-contact-icon">📞</span>01 47 51 XX XX</a>
-          <a href="mailto:contact@tcchataigneraie.com"><span class="f-contact-icon">✉️</span>contact@tcchataigneraie.com</a>
-          <a href="mailto:b2b@tcchataigneraie.com"><span class="f-contact-icon">🏢</span>b2b@tcchataigneraie.com</a>
-          <a href="https://instagram.com/tcchataigneraie" target="_blank" rel="noopener"><span class="f-contact-icon">📸</span>@tcchataigneraie</a>
+          <a href="mailto:contact@lachataigneraietennispadel.com"><span class="f-contact-icon">✉️</span>contact@lachataigneraietennispadel.com</a>
+          <a href="mailto:b2b@lachataigneraietennispadel.com"><span class="f-contact-icon">🏢</span>b2b@lachataigneraietennispadel.com</a>
+          <a href="https://instagram.com/lachataigneraietennispadel" target="_blank" rel="noopener"><span class="f-contact-icon">📸</span>@lachataigneraietennispadel</a>
         </div>
         <button class="btn btn-clay" style="width:100%;justify-content:center;margin-top:18px;font-size:.84rem" onclick="mo('booking')">
           Réserver maintenant
