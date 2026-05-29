@@ -4,682 +4,670 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>TC La Châtaigneraie — Tennis & Padel · Rueil-Malmaison</title>
-<meta name="description" content="Tennis Club de la Châtaigneraie : 7 courts couverts en terre battue, 4 pistes de Padel indoor, restaurant panoramique. Ouvert 7j/7, 8h–23h. Rueil-Malmaison."/>
+<meta name="description" content="7 courts couverts, 4 pistes de padel, école de tennis, fitness, club house. À Rueil-Malmaison. Là où les champions s'entraînent."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-/* ════════════════════════════════════════════════════
-   TOKENS
-════════════════════════════════════════════════════ */
+/* ── TOKENS ─────────────────────────────────────── */
 :root{
-  --p900:#2a1248;
-  --p800:#3d1d68;
-  --p700:#522a84;
-  --p600:#6835a0;
-  --p500:#7b42b8;  /* main brand */
-  --p400:#9460cc;
-  --p300:#b280e0;
-  --p100:#e8d8f8;
-  --p50: #f5effe;
+  --clay:    #C06632;
+  --clay-d:  #9a4e22;
+  --clay-l:  #d88050;
+  --clay-px: #f0c8a0;
+  --clay-bg: #fdf3eb;
 
-  --clay:#b06030;
-  --clay-light:#d4875a;
-  --clay-pale:#fdf0e8;
+  --dark:    #1c1c1e;
+  --dark2:   #2c2c2e;
+  --dark3:   #3c3c3e;
 
-  --w:#fff;
-  --g50:#f7f7f9;
-  --g100:#eeeef2;
-  --g200:#d8d8e0;
-  --g400:#9696a4;
-  --g600:#5a5a6e;
-  --g800:#28283c;
-  --g900:#14141e;
+  --mid:     #6d6d72;
+  --muted:   #aeaeb2;
 
-  --r4:4px; --r8:8px; --r12:12px; --r16:16px; --r24:24px; --r32:32px; --r999:999px;
-  --sh1:0 1px 3px rgba(80,20,140,.06),0 1px 2px rgba(80,20,140,.04);
-  --sh2:0 4px 16px rgba(80,20,140,.10);
-  --sh3:0 12px 40px rgba(80,20,140,.16);
-  --sh4:0 24px 80px rgba(80,20,140,.22);
+  --w:       #ffffff;
+  --off:     #f8f7f5;
+  --g100:    #ededef;
+  --g200:    #d6d6d8;
+
+  --r4:4px;--r8:8px;--r12:12px;--r16:16px;--r24:24px;--r32:32px;
+  --s1:0 1px 4px rgba(0,0,0,.06);
+  --s2:0 4px 16px rgba(0,0,0,.10);
+  --s3:0 12px 40px rgba(0,0,0,.14);
+  --s4:0 24px 72px rgba(0,0,0,.20);
   --ease:.3s cubic-bezier(.4,0,.2,1);
 }
 
-/* ════════════════════════════════════════════════════
-   BASE
-════════════════════════════════════════════════════ */
+/* ── BASE ────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--g800);background:var(--w);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--dark);background:var(--w);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
 img{max-width:100%;display:block}
 button{font-family:inherit;cursor:pointer}
 
-/* ════════════════════════════════════════════════════
-   LAYOUT
-════════════════════════════════════════════════════ */
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+/* ── LAYOUT ──────────────────────────────────────── */
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
 .sec{padding:96px 0}
 .sec-sm{padding:64px 0}
-.sec-alt{background:var(--g50)}
-.sec-dark{background:var(--p900)}
+.bg-off{background:var(--off)}
+.bg-dark{background:var(--dark)}
+.bg-clay{background:var(--clay)}
 
-/* ════════════════════════════════════════════════════
-   TYPOGRAPHY HELPERS
-════════════════════════════════════════════════════ */
-.label{
-  display:inline-block;
-  font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--p500);background:var(--p50);
-  padding:5px 14px;border-radius:var(--r999);margin-bottom:16px;
+/* ── TYPOGRAPHY SYSTEM ───────────────────────────── */
+/* Bebas Neue → grands titres d'impact */
+.display{
+  font-family:'Bebas Neue',cursive;
+  color:var(--clay);letter-spacing:.04em;line-height:1;
 }
-.label-dark{color:var(--p300);background:rgba(255,255,255,.08)}
+/* Cormorant Garamond → titres de section, élégance */
+.serif{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--dark);font-weight:700;line-height:1.15;
+}
+/* Inter → corps de texte */
+.body-text{
+  font-family:'Inter',sans-serif;
+  color:var(--mid);font-weight:400;line-height:1.78;
+}
 
-.display{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;line-height:1.12;letter-spacing:-.025em;color:var(--p800)}
-.display-w{color:var(--w)}
-.display em{font-style:normal;color:var(--p500)}
+.eyebrow{
+  display:inline-block;
+  font-family:'Inter',sans-serif;
+  font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--clay);padding:5px 0;margin-bottom:12px;
+  border-bottom:2px solid var(--clay);
+}
+.eyebrow-w{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.3)}
 
-.headline{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;line-height:1.2;letter-spacing:-.02em;color:var(--p800)}
-.headline-w{color:var(--w)}
+.fs-hero{font-size:clamp(4rem,10vw,9rem)}
+.fs-xl{font-size:clamp(2.4rem,5vw,4rem)}
+.fs-lg{font-size:clamp(1.8rem,3.5vw,2.8rem)}
+.fs-md{font-size:clamp(1.4rem,2.5vw,2rem)}
+.fs-sm{font-size:1.1rem;font-weight:600}
 
-.body-lg{font-size:1.05rem;line-height:1.78;color:var(--g600)}
-.body-lg-w{color:rgba(255,255,255,.68)}
+/* ── BUTTONS ─────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border:2px solid transparent;border-radius:var(--r8);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:700;transition:var(--ease);white-space:nowrap}
+.btn-lg{padding:16px 36px;font-size:1rem}
+.btn-clay{background:var(--clay);color:var(--w)}
+.btn-clay:hover{background:var(--clay-d);transform:translateY(-2px);box-shadow:var(--s3)}
+.btn-dark{background:var(--dark);color:var(--w)}
+.btn-dark:hover{background:var(--dark2);transform:translateY(-2px);box-shadow:var(--s3)}
+.btn-outline{background:transparent;border-color:var(--dark);color:var(--dark)}
+.btn-outline:hover{background:var(--dark);color:var(--w);transform:translateY(-2px)}
+.btn-outline-w{background:transparent;border-color:rgba(255,255,255,.5);color:var(--w)}
+.btn-outline-w:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.9)}
+.btn-outline-clay{background:transparent;border-color:var(--clay);color:var(--clay)}
+.btn-outline-clay:hover{background:var(--clay);color:var(--w);transform:translateY(-2px)}
+.btn-w{background:var(--w);color:var(--dark)}
+.btn-w:hover{background:var(--off);transform:translateY(-2px)}
 
-.rule{width:40px;height:3px;background:var(--p500);border-radius:2px;margin:16px 0 24px}
-.rule-w{background:rgba(255,255,255,.35)}
-.rule-clay{background:var(--clay)}
-
-/* ════════════════════════════════════════════════════
-   BUTTONS
-════════════════════════════════════════════════════ */
-.btn{display:inline-flex;align-items:center;gap:8px;border:2px solid transparent;border-radius:var(--r8);font-size:.9rem;font-weight:700;transition:var(--ease);white-space:nowrap;padding:12px 24px}
-.btn-md{padding:14px 28px;font-size:.95rem}
-.btn-lg{padding:16px 36px;font-size:1rem;border-radius:var(--r12)}
-
-.btn-solid{background:var(--p500);color:var(--w)}
-.btn-solid:hover{background:var(--p600);transform:translateY(-2px);box-shadow:var(--sh3)}
-
-.btn-ghost{background:transparent;border-color:var(--p500);color:var(--p600)}
-.btn-ghost:hover{background:var(--p500);color:var(--w);transform:translateY(-2px)}
-
-.btn-ghost-w{background:transparent;border-color:rgba(255,255,255,.45);color:var(--w)}
-.btn-ghost-w:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.8)}
-
-.btn-white{background:var(--w);color:var(--p700)}
-.btn-white:hover{background:var(--p50);transform:translateY(-2px);box-shadow:var(--sh2)}
-
-/* ════════════════════════════════════════════════════
-   TOPBAR
-════════════════════════════════════════════════════ */
-.topbar{background:var(--p900);padding:8px 0}
+/* ── TOPBAR ──────────────────────────────────────── */
+.topbar{background:var(--dark2);padding:9px 0}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.tb-info{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-.tb-info span{font-size:.76rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:6px}
-.tb-social{display:flex;gap:10px}
-.tb-social a{font-size:.82rem;color:rgba(255,255,255,.4);transition:var(--ease)}
-.tb-social a:hover{color:rgba(255,255,255,.85)}
+.tb-l{display:flex;gap:20px;flex-wrap:wrap}
+.tb-l span{font-size:.74rem;color:var(--muted);display:flex;align-items:center;gap:5px}
+.tb-r{display:flex;gap:12px;align-items:center}
+.tb-r a{font-size:.78rem;color:var(--muted);transition:var(--ease)}
+.tb-r a:hover{color:var(--w)}
+.tb-r .tb-ig{color:var(--clay-l);font-weight:600}
+.tb-r .tb-ig:hover{color:var(--clay)}
 
-/* ════════════════════════════════════════════════════
-   NAVBAR
-════════════════════════════════════════════════════ */
-.nav{
+/* ── NAVBAR ──────────────────────────────────────── */
+.navbar{
   position:sticky;top:0;z-index:900;
-  background:rgba(255,255,255,.95);backdrop-filter:blur(16px);
+  background:rgba(255,255,255,.96);backdrop-filter:blur(16px);
   border-bottom:1px solid var(--g100);
   transition:box-shadow var(--ease);
 }
-.nav.raised{box-shadow:var(--sh2)}
-.nav .wrap{display:flex;align-items:center;height:72px;gap:16px}
+.navbar.up{box-shadow:var(--s2)}
+.navbar .wrap{display:flex;align-items:center;height:72px;gap:12px}
 
-/* Logo */
-.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.logo-emblem{width:44px;height:44px;flex-shrink:0}
-.logo-text strong{display:block;font-size:.96rem;font-weight:800;color:var(--p800);letter-spacing:-.01em;line-height:1.1}
-.logo-text small{font-size:.66rem;color:var(--g400);letter-spacing:.07em;text-transform:uppercase}
+.logo{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.logo-mark{width:48px;height:48px;flex-shrink:0}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--dark);line-height:1.1}
+.logo-sub{font-size:.62rem;font-family:'Inter',sans-serif;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
 
-/* Nav links */
-.nav-links{display:flex;align-items:center;margin-left:auto;gap:2px}
-.nav-links a{padding:7px 14px;border-radius:var(--r8);font-size:.86rem;font-weight:600;color:var(--g600);transition:var(--ease);white-space:nowrap}
-.nav-links a:hover,.nav-links a.on{color:var(--p600);background:var(--p50)}
+.nav-list{display:flex;align-items:center;margin-left:auto;gap:2px}
+.nav-list a{padding:7px 13px;border-radius:var(--r8);font-size:.84rem;font-weight:600;color:var(--mid);transition:var(--ease)}
+.nav-list a:hover,.nav-list a.on{color:var(--clay);background:var(--clay-bg)}
 
-.nav-cta{display:flex;align-items:center;gap:10px;margin-left:16px}
+.nav-cta{display:flex;gap:10px;margin-left:14px}
 
-/* Hamburger */
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;flex-shrink:0;margin-left:auto}
-.burger span{display:block;width:22px;height:2px;background:var(--g800);border-radius:2px;transition:var(--ease)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;margin-left:auto;flex-shrink:0}
+.burger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:var(--ease)}
 
-/* Mobile menu */
-.drawer{
-  display:none;flex-direction:column;
-  background:var(--w);border-top:1px solid var(--g100);
-  padding:12px 20px 20px;gap:2px;
-}
+.drawer{display:none;flex-direction:column;background:var(--w);border-top:1px solid var(--g100);padding:12px 20px 20px;gap:2px}
 .drawer.open{display:flex}
-.drawer a{padding:12px 16px;border-radius:var(--r8);font-size:.92rem;font-weight:600;color:var(--g600);transition:var(--ease)}
-.drawer a:hover{color:var(--p600);background:var(--p50)}
+.drawer a{padding:12px 16px;border-radius:var(--r8);font-size:.92rem;font-weight:600;color:var(--mid);transition:var(--ease)}
+.drawer a:hover{color:var(--clay);background:var(--clay-bg)}
 .drawer .btn{margin-top:8px;justify-content:center}
 
-/* ════════════════════════════════════════════════════
-   HERO
-════════════════════════════════════════════════════ */
-.hero{position:relative;height:90vh;min-height:560px;display:flex;align-items:center;overflow:hidden}
-
-/* Photo-like clay court background */
+/* ── HERO ────────────────────────────────────────── */
+.hero{
+  position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
+  background:var(--dark);
+}
+/* Court texture + overlay */
 .hero-bg{
-  position:absolute;inset:0;
+  position:absolute;inset:0;opacity:.55;
   background:
-    /* dark overlay */
-    linear-gradient(170deg,rgba(30,10,55,.72) 0%,rgba(20,8,40,.58) 45%,rgba(15,6,30,.70) 100%),
-    /* Court lines */
-    repeating-linear-gradient(90deg,transparent 0,transparent 74px,rgba(255,255,255,.05) 74px,rgba(255,255,255,.05) 76px),
-    repeating-linear-gradient(0deg,transparent 0,transparent 50px,rgba(255,255,255,.04) 50px,rgba(255,255,255,.04) 52px),
-    /* Clay gradient */
-    radial-gradient(ellipse at 60% 40%,#c07040 0%,#9a4822 35%,#7a3015 60%,#4a1c08 100%);
-  background-size:cover;
+    repeating-linear-gradient(90deg,transparent 0,transparent 74px,rgba(255,255,255,.04) 74px,rgba(255,255,255,.04) 76px),
+    repeating-linear-gradient(0deg,transparent 0,transparent 50px,rgba(255,255,255,.03) 50px,rgba(255,255,255,.03) 52px),
+    linear-gradient(160deg,#c07040 0%,#9a4822 35%,#7a3015 60%,#3a1408 100%);
 }
-
-/* Arch dome silhouette */
-.hero-dome{
-  position:absolute;bottom:-1px;left:0;right:0;height:45%;
-  background:
-    radial-gradient(ellipse 90% 100% at 50% 100%,
-      rgba(20,8,40,.0) 55%,
-      rgba(20,8,40,.3) 75%,
-      rgba(20,8,40,.6) 88%,
-      rgba(20,8,40,.85) 100%);
-  pointer-events:none;
+.hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(28,28,30,.2) 0%,rgba(28,28,30,.8) 100%)}
+.hero-inner{position:relative;z-index:2;padding:80px 0}
+.hero-tagline{
+  font-family:'Inter',sans-serif;font-size:.75rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--clay-l);
+  display:flex;align-items:center;gap:10px;margin-bottom:18px;
 }
-
-/* Net line */
-.hero-net{
-  position:absolute;
-  top:0;bottom:0;left:50%;
-  width:1px;background:rgba(255,255,255,.06);
-  pointer-events:none;
-}
-
-.hero-inner{position:relative;z-index:2;width:100%;text-align:center}
-
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.2);
-  color:rgba(255,255,255,.82);
-  font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  padding:7px 18px;border-radius:var(--r999);
-  margin-bottom:28px;backdrop-filter:blur(8px);
-}
-.hero-badge::before{content:'';width:6px;height:6px;background:var(--p300);border-radius:50%;animation:blink 2.4s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-
+.hero-tagline::before{content:'';width:32px;height:1px;background:var(--clay-l)}
 .hero h1{
-  font-size:clamp(2rem,6vw,4.4rem);
-  font-weight:900;color:var(--w);
-  letter-spacing:.04em;text-transform:uppercase;
-  line-height:1.08;margin-bottom:18px;
-  text-shadow:0 2px 24px rgba(0,0,0,.5);
+  font-family:'Bebas Neue',cursive;
+  font-size:clamp(3.5rem,9vw,8.5rem);
+  color:var(--w);letter-spacing:.04em;line-height:.95;
+  margin-bottom:20px;
 }
+.hero h1 em{font-style:normal;color:var(--clay);display:block}
 .hero-sub{
-  font-size:clamp(.95rem,2vw,1.18rem);
-  color:rgba(255,255,255,.78);
-  font-style:italic;font-weight:300;
-  margin-bottom:44px;
-  text-shadow:0 1px 10px rgba(0,0,0,.4);
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.1rem,2.2vw,1.5rem);
+  color:rgba(255,255,255,.72);font-style:italic;font-weight:600;
+  margin-bottom:44px;max-width:520px;
 }
-.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+.hero-numbers{
+  display:flex;gap:48px;flex-wrap:wrap;
+  padding-top:36px;border-top:1px solid rgba(255,255,255,.1);
+}
+.hn{text-align:left}
+.hn-n{font-family:'Bebas Neue',cursive;font-size:3rem;color:var(--clay);line-height:1}
+.hn-l{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:3px}
 
-/* Scroll cue */
-.scroll-cue{
+.hero-scroll{
   position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
-  color:rgba(255,255,255,.38);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
   display:flex;flex-direction:column;align-items:center;gap:6px;
-  animation:float 2.8s ease-in-out infinite;
+  animation:bob 2.6s ease-in-out infinite;
 }
-.scroll-cue svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
-@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+.hero-scroll svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
 
-/* ════════════════════════════════════════════════════
-   QUICK NAV STRIP
-════════════════════════════════════════════════════ */
-.strip{background:var(--p700)}
+/* ── STRIP (chiffres clés) ───────────────────────── */
+.strip{background:var(--clay);padding:0}
 .strip .wrap{display:grid;grid-template-columns:repeat(5,1fr)}
-.strip-item{
-  display:flex;align-items:center;justify-content:center;gap:9px;
-  padding:18px 10px;
-  color:rgba(255,255,255,.75);font-size:.82rem;font-weight:600;
-  border-right:1px solid rgba(255,255,255,.1);
+.si{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:20px 10px;
+  color:rgba(255,255,255,.85);font-size:.82rem;font-weight:600;
+  border-right:1px solid rgba(255,255,255,.15);
   transition:var(--ease);cursor:pointer;
 }
-.strip-item:last-child{border-right:none}
-.strip-item:hover{background:rgba(255,255,255,.1);color:var(--w)}
-.strip-item svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.si:last-child{border-right:none}
+.si:hover{background:rgba(0,0,0,.1);color:var(--w)}
+.si svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
-/* ════════════════════════════════════════════════════
-   ABOUT
-════════════════════════════════════════════════════ */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-
-.photo-frame{
-  position:relative;border-radius:var(--r24);overflow:visible;
-}
-.photo-main{
-  width:100%;aspect-ratio:4/3;border-radius:var(--r24);
+/* ── QUI SOMMES-NOUS (homepage) ─────────────────── */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-img-col{position:relative}
+.about-photo{
+  width:100%;aspect-ratio:3/4;border-radius:var(--r16);overflow:hidden;
   background:
-    linear-gradient(180deg,rgba(80,30,15,.25),rgba(60,20,10,.55)),
-    repeating-linear-gradient(90deg,transparent 0,transparent 74px,rgba(255,255,255,.05) 74px,rgba(255,255,255,.05) 76px),
+    linear-gradient(180deg,rgba(28,28,30,.15),rgba(28,28,30,.6)),
     linear-gradient(155deg,#c07040 0%,#9a4822 40%,#6a2c12 100%);
-  display:flex;align-items:flex-end;justify-content:flex-start;padding:24px;
-  box-shadow:var(--sh4);
+  display:flex;align-items:flex-end;padding:24px;
+  box-shadow:var(--s4);
 }
-.photo-caption{
-  background:rgba(255,255,255,.12);backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:var(--r8);padding:10px 16px;
-  font-size:.78rem;font-weight:600;color:var(--w);letter-spacing:.04em;
+.about-photo-caption{
+  background:rgba(28,28,30,.7);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.12);border-radius:var(--r8);
+  padding:10px 16px;font-family:'Inter',sans-serif;
+  font-size:.74rem;font-weight:600;color:rgba(255,255,255,.8);letter-spacing:.05em;
 }
-.floater{
-  position:absolute;bottom:-20px;right:-20px;
-  background:var(--w);border-radius:var(--r16);padding:18px 22px;
-  box-shadow:var(--sh4);text-align:center;min-width:120px;
+.about-float{
+  position:absolute;top:-24px;right:-24px;
+  background:var(--w);border-radius:var(--r16);padding:20px 24px;
+  box-shadow:var(--s4);text-align:center;
 }
-.floater-num{font-size:2.4rem;font-weight:900;color:var(--p600);line-height:1;display:block}
-.floater-lbl{font-size:.7rem;color:var(--g400);text-transform:uppercase;letter-spacing:.07em;margin-top:3px;display:block}
+.about-float-n{
+  font-family:'Bebas Neue',cursive;font-size:3.5rem;color:var(--clay);line-height:1;
+}
+.about-float-l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:3px;font-family:'Inter',sans-serif}
 
-.about-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
-.chip{
-  display:flex;align-items:center;gap:9px;
-  padding:11px 14px;
-  background:var(--p50);border:1px solid var(--p100);
-  border-radius:var(--r8);
-  font-size:.82rem;font-weight:600;color:var(--p700);
+.about-text .serif{margin-bottom:4px}
+.about-body{margin-bottom:20px}
+p.about-body{font-size:1rem;color:var(--mid);line-height:1.8}
+
+/* Stars section */
+.stars-trained{
+  margin-top:36px;padding:28px;
+  background:var(--off);border-radius:var(--r12);
+  border-left:4px solid var(--clay);
+}
+.stars-trained h4{
+  font-family:'Inter',sans-serif;font-size:.7rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:14px;
+}
+.stars-list{display:flex;flex-wrap:wrap;gap:8px}
+.star-chip{
+  display:flex;align-items:center;gap:7px;
+  padding:7px 14px;background:var(--w);border:1px solid var(--g200);
+  border-radius:var(--r999);font-size:.82rem;font-weight:600;color:var(--dark);
+  box-shadow:var(--s1);
+}
+.star-chip::before{content:'★';color:var(--clay);font-size:.7rem}
+.r999{border-radius:999px}
+
+/* ── ESPACES (cards) ─────────────────────────────── */
+.espaces-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.espace-card{
+  border-radius:var(--r16);overflow:hidden;position:relative;
+  cursor:pointer;box-shadow:var(--s1);transition:var(--ease);
+  background:var(--w);
+}
+.espace-card:hover{transform:translateY(-6px);box-shadow:var(--s4)}
+.ec-img{
+  height:240px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
+}
+.ec-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(28,28,30,.9) 0%,rgba(28,28,30,.05) 55%)}
+.ec-img-inner{position:absolute;inset:0;transition:transform var(--ease)}
+.espace-card:hover .ec-img-inner{transform:scale(1.06)}
+
+.ec-tennis{background:linear-gradient(155deg,#c07040 0%,#9a4822 40%,#6a2c12 100%)}
+.ec-padel{background:linear-gradient(155deg,#1e1e22 0%,#2e2e32 60%)}
+.ec-house{background:linear-gradient(155deg,#2a2028 0%,#3a3040 60%)}
+.ec-school{background:linear-gradient(155deg,#1a2830 0%,#2a3c48 60%)}
+.ec-fitness{background:linear-gradient(155deg,#1e2820 0%,#2e3c30 60%)}
+.ec-resto{background:linear-gradient(155deg,#28201a 0%,#3c3028 60%)}
+
+.ec-num{
+  position:absolute;top:16px;right:16px;z-index:2;
+  font-family:'Bebas Neue',cursive;font-size:3rem;color:rgba(255,255,255,.12);line-height:1;
+}
+.ec-body{padding:22px}
+.ec-body h3{
+  font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;
+  color:var(--dark);margin-bottom:6px;
+}
+.ec-body p{font-size:.83rem;color:var(--mid);line-height:1.6;margin-bottom:14px}
+.ec-cta{
+  font-size:.78rem;font-weight:700;color:var(--clay);
+  display:flex;align-items:center;gap:5px;
   transition:var(--ease);
 }
-.chip:hover{background:var(--p100);border-color:var(--p300)}
-.chip svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;flex-shrink:0}
+.ec-cta svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform var(--ease)}
+.espace-card:hover .ec-cta{color:var(--clay-d)}
+.espace-card:hover .ec-cta svg{transform:translateX(4px)}
 
-/* ════════════════════════════════════════════════════
-   STATS BAR
-════════════════════════════════════════════════════ */
-.stats-bar{background:var(--p50);border-top:1px solid var(--p100);border-bottom:1px solid var(--p100);padding:44px 0}
-.stats-bar .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{text-align:center;padding:0 16px;border-right:1px solid var(--p100)}
-.stat:last-child{border-right:none}
-.stat-n{font-size:2.8rem;font-weight:900;color:var(--p600);line-height:1;letter-spacing:-.02em}
-.stat-l{font-size:.74rem;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
-
-/* ════════════════════════════════════════════════════
-   ACTIVITIES
-════════════════════════════════════════════════════ */
-.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
-.act{
-  border-radius:var(--r16);overflow:hidden;
-  position:relative;cursor:pointer;box-shadow:var(--sh1);
-  transition:var(--ease);
+.ec-text-over{position:absolute;bottom:0;left:0;right:0;padding:20px;z-index:2;color:var(--w)}
+.ec-text-over h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+.ec-text-over p{font-size:.79rem;color:rgba(255,255,255,.65)}
+.ec-badge{
+  display:inline-block;background:var(--clay);color:var(--w);
+  font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:var(--r999);margin-top:7px;
 }
-.act:hover{transform:translateY(-6px);box-shadow:var(--sh3)}
-.act-img{
-  height:260px;display:flex;align-items:center;justify-content:center;
-  font-size:3rem;overflow:hidden;position:relative;
-  transition:transform var(--ease);
+
+/* Fitness focus (wide card) */
+.fitness-focus{
+  grid-column:span 3;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border-radius:var(--r16);overflow:hidden;box-shadow:var(--s2);
 }
-.act:hover .act-img{transform:scale(1.04)}
-.act-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(20,8,50,.88) 0%,rgba(20,8,50,.1) 55%)}
-
-.ai-clay{background:linear-gradient(155deg,#c07040 0%,#9a4822 40%,#6a2c12 100%)}
-.ai-padel{background:linear-gradient(155deg,var(--p800) 0%,var(--p600) 60%,var(--p400) 100%)}
-.ai-coach{background:linear-gradient(155deg,#1a2640 0%,#2d4060 50%,#3a5070 100%)}
-
-.act-body{position:absolute;bottom:0;left:0;right:0;padding:22px;color:var(--w)}
-.act-body h3{font-size:1.05rem;font-weight:800;margin-bottom:4px}
-.act-body p{font-size:.8rem;color:rgba(255,255,255,.68);margin-bottom:10px}
-.price-pill{display:inline-block;background:var(--p500);color:var(--w);font-size:.72rem;font-weight:700;padding:4px 11px;border-radius:var(--r999)}
-
-/* ════════════════════════════════════════════════════
-   BOOKING BAND
-════════════════════════════════════════════════════ */
-.book-band{
-  background:linear-gradient(110deg,var(--p900) 0%,var(--p700) 100%);
-  padding:52px 0;
+.ff-photo{
+  min-height:360px;background:linear-gradient(155deg,#1c1e20 0%,#2e3a2c 100%);
+  display:flex;align-items:flex-end;padding:28px;position:relative;overflow:hidden;
 }
+.ff-photo-bg{
+  position:absolute;inset:0;opacity:.4;
+  background:radial-gradient(ellipse at 30% 60%,var(--clay) 0%,transparent 60%);
+}
+.ff-caption{position:relative;z-index:1}
+.ff-caption h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--w);margin-bottom:6px}
+.ff-caption p{font-size:.83rem;color:rgba(255,255,255,.6)}
+.ff-content{
+  background:var(--dark);padding:40px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.ff-content .eyebrow-w{margin-bottom:14px}
+.ff-tagline{
+  font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;
+  color:var(--w);margin-bottom:16px;line-height:1.2;
+}
+.ff-tagline em{font-style:italic;color:var(--clay-l)}
+.ff-body{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:24px}
+.ff-items{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.ff-item{display:flex;align-items:center;gap:10px;font-size:.84rem;color:rgba(255,255,255,.7)}
+.ff-item::before{content:'';width:6px;height:6px;background:var(--clay);border-radius:50%;flex-shrink:0}
+
+/* ── RÉSERVATION BAND ────────────────────────────── */
+.book-band{background:var(--dark);padding:56px 0}
 .book-inner{display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap}
-.book-text h2{font-size:1.65rem;font-weight:800;color:var(--w);margin-bottom:6px}
-.book-text p{color:rgba(255,255,255,.6);font-size:.88rem}
-
+.book-text h2{font-family:'Bebas Neue',cursive;font-size:clamp(2.5rem,5vw,4rem);color:var(--w);letter-spacing:.04em;margin-bottom:6px}
+.book-text h2 em{font-style:normal;color:var(--clay)}
+.book-text p{color:var(--muted);font-size:.88rem}
 .book-form{
   display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:var(--r16);padding:18px 20px;
-  backdrop-filter:blur(8px);
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r16);padding:20px;backdrop-filter:blur(8px);
 }
 .bf{display:flex;flex-direction:column;gap:5px}
-.bf label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.45)}
+.bf label{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
 .bf select,.bf input[type=date]{
-  padding:10px 13px;border-radius:var(--r8);
-  border:1px solid rgba(255,255,255,.15);
-  background:rgba(255,255,255,.08);color:var(--w);
-  font-size:.86rem;font-family:inherit;outline:none;
-  transition:var(--ease);min-width:130px;
+  padding:10px 13px;border-radius:var(--r8);border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.08);color:var(--w);font-size:.86rem;font-family:inherit;
+  outline:none;min-width:128px;transition:var(--ease);
 }
-.bf select option{background:var(--p900)}
-.bf select:focus,.bf input:focus{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.14)}
+.bf select option{background:var(--dark)}
+.bf select:focus,.bf input:focus{border-color:var(--clay-l);background:rgba(255,255,255,.12)}
 input[type=date]::-webkit-calendar-picker-indicator{filter:invert(1) opacity(.5);cursor:pointer}
 
-/* ════════════════════════════════════════════════════
-   PADEL
-════════════════════════════════════════════════════ */
-.padel-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-
-.court-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.court-card{
-  background:var(--w);border:1.5px solid var(--g100);
-  border-radius:var(--r12);padding:20px 18px;text-align:center;
-  transition:var(--ease);
+/* ── ÉVÉNEMENTS ──────────────────────────────────── */
+.ev-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ev-card{
+  background:var(--w);border-radius:var(--r16);overflow:hidden;
+  box-shadow:var(--s1);transition:var(--ease);
 }
-.court-card:hover{border-color:var(--p300);box-shadow:var(--sh2);transform:translateY(-3px)}
-.court-card.span2{grid-column:span 2;background:linear-gradient(135deg,var(--p50),rgba(123,66,184,.08));border-color:var(--p300)}
-.court-card.span2:hover{border-color:var(--p500)}
-.cc-icon{font-size:1.6rem;margin-bottom:8px}
-.cc-icon svg{width:28px;height:28px;stroke:var(--p500);fill:none;stroke-width:1.5;stroke-linecap:round;margin:0 auto 8px}
-.court-card h4{font-size:.88rem;font-weight:700;color:var(--p800);margin-bottom:3px}
-.court-card p{font-size:.75rem;color:var(--g400);line-height:1.4}
-
-.tourn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
-.tb{display:flex;align-items:center;gap:5px;padding:5px 14px;border-radius:var(--r999);font-size:.74rem;font-weight:700}
-.tb-p{background:var(--p50);color:var(--p700)}
-.tb-c{background:var(--clay-pale);color:var(--clay)}
-.tb-n{background:var(--g50);color:var(--g600);border:1px solid var(--g200)}
-
-.partner-badge{
-  display:inline-flex;align-items:center;gap:12px;
-  background:var(--p50);border:1px solid var(--p100);
-  border-radius:var(--r8);padding:12px 18px;margin-top:20px;
+.ev-card:hover{transform:translateY(-5px);box-shadow:var(--s3)}
+.ev-img{height:180px;position:relative;display:flex;align-items:center;justify-content:center}
+.ev-datebox{
+  position:absolute;top:14px;left:14px;
+  background:var(--clay);color:var(--w);
+  border-radius:var(--r8);padding:8px 12px;text-align:center;line-height:1.1;
 }
-.partner-badge p{font-size:.73rem;color:var(--g400);margin-top:2px}
-.partner-badge strong{font-size:.88rem;color:var(--p700)}
+.ev-datebox strong{display:block;font-family:'Bebas Neue',cursive;font-size:1.8rem}
+.ev-datebox span{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.ev-body{padding:20px}
+.ev-body h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:5px}
+.ev-body p{font-size:.8rem;color:var(--mid);margin-bottom:14px;line-height:1.55}
+.ev-tags{display:flex;gap:5px;flex-wrap:wrap}
+.ev-tag{font-size:.69rem;font-weight:600;padding:3px 9px;border-radius:var(--r4);background:var(--clay-bg);color:var(--clay-d)}
+.ev-i1{background:linear-gradient(145deg,var(--dark2),var(--dark3))}
+.ev-i2{background:linear-gradient(145deg,#7a3015,#c07040)}
+.ev-i3{background:linear-gradient(145deg,#1a2830,#2a4050)}
+.ev-i4{background:linear-gradient(145deg,#2a1a28,var(--dark3))}
+.ev-i5{background:linear-gradient(145deg,#1a2818,#2a4028)}
+.ev-i6{background:linear-gradient(145deg,var(--dark),var(--clay-d))}
 
-/* ════════════════════════════════════════════════════
-   TARIFS
-════════════════════════════════════════════════════ */
-.price-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:56px}
+/* ── TARIFS ──────────────────────────────────────── */
+.tarifs-intro{max-width:640px;margin:0 auto 56px;text-align:center}
+.price-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:56px}
 .pc{
-  background:var(--w);border:1.5px solid var(--g100);
-  border-radius:var(--r12);padding:22px 16px;text-align:center;
-  transition:var(--ease);
+  background:var(--w);border:1.5px solid var(--g100);border-radius:var(--r12);
+  padding:24px 18px;text-align:center;transition:var(--ease);
 }
-.pc:hover{border-color:var(--p400);transform:translateY(-4px);box-shadow:var(--sh2)}
-.pc-sport{font-size:1.6rem;margin-bottom:10px}
-.pc h4{font-size:.84rem;font-weight:700;color:var(--g800);margin-bottom:3px}
-.pc-slot{font-size:.72rem;color:var(--g400);margin-bottom:14px}
-.pc-price{font-size:2.2rem;font-weight:900;color:var(--p600);line-height:1}
-.pc-unit{font-size:.74rem;color:var(--g400);margin-top:2px}
+.pc:hover{border-color:var(--clay);transform:translateY(-4px);box-shadow:var(--s2)}
+.pc-icon{font-size:1.6rem;margin-bottom:10px}
+.pc h4{font-size:.84rem;font-weight:700;color:var(--dark);margin-bottom:3px}
+.pc-slot{font-size:.72rem;color:var(--muted);margin-bottom:14px}
+.pc-price{font-family:'Bebas Neue',cursive;font-size:3rem;color:var(--clay);line-height:1}
+.pc-unit{font-size:.72rem;color:var(--muted);margin-top:2px}
 
+/* Plans */
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .plan{
-  background:var(--w);border:2px solid var(--g100);
-  border-radius:var(--r16);padding:32px 26px;
-  position:relative;transition:var(--ease);
+  background:var(--w);border:2px solid var(--g100);border-radius:var(--r16);
+  padding:32px 26px;position:relative;transition:var(--ease);
 }
-.plan:hover:not(.plan-pop){border-color:var(--p300);transform:translateY(-4px);box-shadow:var(--sh2)}
-.plan-pop{border-color:var(--p500);transform:translateY(-8px);box-shadow:var(--sh4)}
+.plan:hover:not(.plan-pop){border-color:var(--clay);transform:translateY(-4px);box-shadow:var(--s2)}
+.plan-pop{border-color:var(--clay);transform:translateY(-8px);box-shadow:var(--s4)}
 .pop-tag{
   position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:var(--p500);color:var(--w);
+  background:var(--clay);color:var(--w);
   font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
   padding:4px 16px;border-radius:var(--r999);white-space:nowrap;
 }
-.plan h3{font-size:1rem;font-weight:800;color:var(--p800);margin-bottom:5px}
-.plan>.desc{font-size:.82rem;color:var(--g400);margin-bottom:20px;line-height:1.5}
-.plan-price .big{font-size:2.6rem;font-weight:900;color:var(--p600);line-height:1}
-.plan-price .per{font-size:.8rem;color:var(--g400);margin-left:3px}
+.plan h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+.plan>.desc{font-size:.83rem;color:var(--mid);margin-bottom:18px;line-height:1.55}
+.plan-hook{
+  font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;
+  color:var(--clay);margin-bottom:20px;line-height:1.4;
+}
 .plan-price{margin-bottom:24px}
+.plan-price .big{font-family:'Bebas Neue',cursive;font-size:3.2rem;color:var(--clay);line-height:1}
+.plan-price .per{font-size:.8rem;color:var(--muted)}
 .plan-feats{margin-bottom:26px}
 .plan-feats li{
-  display:flex;align-items:center;gap:9px;
-  padding:8px 0;font-size:.84rem;color:var(--g600);
-  border-bottom:1px solid var(--g50);
+  display:flex;align-items:center;gap:9px;padding:8px 0;
+  font-size:.84rem;color:var(--mid);border-bottom:1px solid var(--g100);
 }
 .plan-feats li:last-child{border-bottom:none}
-.check{
-  width:18px;height:18px;flex-shrink:0;
-  background:var(--p50);border-radius:50%;
+.pf-chk{
+  width:18px;height:18px;flex-shrink:0;background:var(--clay-bg);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+}
+.pf-chk svg{width:10px;height:10px;stroke:var(--clay);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── ACTUALITÉS ──────────────────────────────────── */
+.actu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.actu-card{background:var(--w);border-radius:var(--r16);overflow:hidden;box-shadow:var(--s1);transition:var(--ease)}
+.actu-card:hover{transform:translateY(-5px);box-shadow:var(--s3)}
+.actu-img{height:200px;position:relative}
+.actu-img-bg{position:absolute;inset:0}
+.ac-i1{background:linear-gradient(145deg,#7a3015,#c07040)}
+.ac-i2{background:linear-gradient(145deg,var(--dark2),var(--dark3))}
+.ac-i3{background:linear-gradient(145deg,#1a2830,#2a4050)}
+.actu-cat{
+  position:absolute;bottom:12px;left:12px;
+  background:var(--clay);color:var(--w);
+  font-size:.67rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:4px 10px;border-radius:var(--r4);
+}
+.actu-body{padding:20px}
+.actu-body h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--dark);margin-bottom:6px;line-height:1.25}
+.actu-body p{font-size:.81rem;color:var(--mid);line-height:1.6;margin-bottom:14px}
+.actu-meta{font-size:.72rem;color:var(--muted);font-weight:600;letter-spacing:.04em}
+.actu-link{font-size:.8rem;font-weight:700;color:var(--clay);display:inline-flex;align-items:center;gap:4px;transition:var(--ease)}
+.actu-link svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform var(--ease)}
+.actu-card:hover .actu-link svg{transform:translateX(4px)}
+
+/* ── INSTAGRAM / RÉSEAUX ─────────────────────────── */
+.insta-section{background:var(--off)}
+.insta-header{text-align:center;margin-bottom:44px}
+.insta-handle{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--clay);color:var(--w);
+  padding:10px 22px;border-radius:var(--r999);
+  font-family:'Inter',sans-serif;font-size:.95rem;font-weight:700;
+  margin-bottom:12px;transition:var(--ease);cursor:pointer;
+}
+.insta-handle:hover{background:var(--clay-d);transform:translateY(-2px);box-shadow:var(--s2)}
+.insta-handle svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.insta-desc{font-size:.88rem;color:var(--mid)}
+
+.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:40px}
+.insta-post{
+  aspect-ratio:1;border-radius:var(--r12);overflow:hidden;
+  position:relative;cursor:pointer;
+  transition:var(--ease);
+}
+.insta-post:hover{transform:scale(1.03);box-shadow:var(--s3)}
+.ip-bg{position:absolute;inset:0}
+.ip-1{background:linear-gradient(145deg,#c07040,#9a4822)}
+.ip-2{background:linear-gradient(145deg,var(--dark2),var(--dark3))}
+.ip-3{background:linear-gradient(145deg,#2a4028,#1a2818)}
+.ip-4{background:linear-gradient(145deg,#1a2830,var(--dark2))}
+.ip-overlay{
+  position:absolute;inset:0;background:rgba(28,28,30,0);
   display:flex;align-items:center;justify-content:center;
+  transition:background var(--ease);
 }
-.check svg{width:10px;height:10px;stroke:var(--p500);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.insta-post:hover .ip-overlay{background:rgba(28,28,30,.5)}
+.ip-icon{opacity:0;transition:opacity var(--ease)}
+.insta-post:hover .ip-icon{opacity:1}
 
-/* ════════════════════════════════════════════════════
-   B2B
-════════════════════════════════════════════════════ */
-.b2b-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.b2b-offers{display:flex;flex-direction:column;gap:12px;margin-top:28px}
-.b2b-row{
-  display:flex;gap:16px;align-items:flex-start;
-  padding:18px 20px;
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
-  border-radius:var(--r12);transition:var(--ease);
+.social-row{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.soc-btn{
+  display:flex;align-items:center;gap:9px;padding:11px 20px;
+  border-radius:var(--r8);font-size:.86rem;font-weight:700;
+  border:1.5px solid var(--g200);color:var(--dark);background:var(--w);
+  transition:var(--ease);
 }
-.b2b-row:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);transform:translateX(4px)}
-.b2b-ico{
-  width:44px;height:44px;flex-shrink:0;border-radius:var(--r8);
-  background:rgba(123,66,184,.35);
-  display:flex;align-items:center;justify-content:center;font-size:1.3rem;
-}
-.b2b-ico svg{width:20px;height:20px;stroke:var(--p300);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.b2b-row h4{font-size:.9rem;font-weight:700;color:var(--w);margin-bottom:3px}
-.b2b-row p{font-size:.79rem;color:rgba(255,255,255,.48);line-height:1.55}
+.soc-btn:hover{border-color:var(--clay);color:var(--clay);transform:translateY(-2px);box-shadow:var(--s1)}
 
-.b2b-panel{
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);
-  border-radius:var(--r24);padding:32px;
+/* Newsletter + alternatives */
+.stay-box{
+  background:var(--w);border-radius:var(--r16);padding:40px;
+  box-shadow:var(--s2);max-width:720px;margin:0 auto;
+  text-align:center;
 }
-.b2b-panel h3{font-size:1.25rem;font-weight:800;color:var(--w);margin-bottom:10px}
-.b2b-panel p{font-size:.86rem;color:rgba(255,255,255,.52);margin-bottom:24px;line-height:1.68}
-.b2b-kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
-.kpi{background:rgba(255,255,255,.04);border-radius:var(--r8);padding:14px;text-align:center}
-.kpi strong{display:block;font-size:1.55rem;font-weight:900;color:var(--p300)}
-.kpi span{font-size:.7rem;color:rgba(255,255,255,.38)}
+.stay-box h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+.stay-box p{font-size:.88rem;color:var(--mid);margin-bottom:24px;line-height:1.65}
+.stay-options{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.stay-opt{
+  display:flex;align-items:center;gap:7px;padding:9px 16px;
+  border-radius:var(--r999);font-size:.8rem;font-weight:600;
+  background:var(--clay-bg);color:var(--clay-d);border:1.5px solid var(--clay-px);
+  transition:var(--ease);cursor:pointer;
+}
+.stay-opt:hover{background:var(--clay);color:var(--w);border-color:var(--clay)}
+.nl-form{display:flex;gap:10px;max-width:440px;margin:0 auto}
+.nl-form input{
+  flex:1;padding:12px 16px;border:1.5px solid var(--g200);border-radius:var(--r8);
+  font-size:.9rem;font-family:inherit;outline:none;transition:var(--ease);color:var(--dark);
+}
+.nl-form input:focus{border-color:var(--clay)}
 
-/* ════════════════════════════════════════════════════
-   RESTAURANT
-════════════════════════════════════════════════════ */
-.resto-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.resto-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.rp{border-radius:var(--r16);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
-.rp.tall{grid-row:span 2;min-height:320px}
-.rp.short{min-height:148px}
-.rp-1{background:linear-gradient(145deg,#1a2440,#2a3860)}
-.rp-2{background:linear-gradient(145deg,var(--p800),var(--p600))}
-.rp-3{background:linear-gradient(145deg,#1a3020,#2d5040)}
-.rf-list{display:flex;flex-direction:column;gap:18px;margin-top:26px}
-.rf{display:flex;gap:14px;align-items:flex-start}
-.rf-ico{
-  width:42px;height:42px;flex-shrink:0;border-radius:var(--r8);
-  background:var(--p50);display:flex;align-items:center;justify-content:center;
-}
-.rf-ico svg{width:18px;height:18px;stroke:var(--p500);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.rf h4{font-size:.9rem;font-weight:700;color:var(--p800);margin-bottom:2px}
-.rf p{font-size:.81rem;color:var(--g400);line-height:1.5}
-
-/* ════════════════════════════════════════════════════
-   EVENTS
-════════════════════════════════════════════════════ */
-.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-.ev{
-  background:var(--w);border-radius:var(--r16);overflow:hidden;
-  box-shadow:var(--sh1);transition:var(--ease);
-}
-.ev:hover{transform:translateY(-5px);box-shadow:var(--sh3)}
-.ev-img{height:175px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative}
-.ev-date-pill{
-  position:absolute;top:14px;left:14px;
-  background:var(--p500);color:var(--w);
-  border-radius:var(--r8);padding:7px 12px;text-align:center;line-height:1.2;
-}
-.ev-date-pill strong{display:block;font-size:1.2rem;font-weight:900}
-.ev-date-pill span{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
-.ev-body{padding:18px 20px}
-.ev-body h3{font-size:.94rem;font-weight:700;color:var(--p800);margin-bottom:5px}
-.ev-body p{font-size:.79rem;color:var(--g400);margin-bottom:14px;line-height:1.5}
-.ev-tags{display:flex;gap:5px;flex-wrap:wrap}
-.ev-tag{font-size:.69rem;font-weight:600;padding:3px 9px;border-radius:4px;background:var(--p50);color:var(--p600)}
-.ev-img-1{background:linear-gradient(145deg,var(--p800),var(--p500))}
-.ev-img-2{background:linear-gradient(145deg,#7a3015,#c07040)}
-.ev-img-3{background:linear-gradient(145deg,#1a3028,#2d5040)}
-
-/* ════════════════════════════════════════════════════
-   TESTIMONIALS
-════════════════════════════════════════════════════ */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-.testi{
-  background:var(--w);border-radius:var(--r12);padding:26px;
-  box-shadow:var(--sh1);position:relative;
-}
-.testi::before{
-  content:'\201C';position:absolute;top:14px;right:20px;
-  font-size:3.6rem;color:var(--p100);font-family:Georgia,serif;line-height:1;
-}
-.stars{color:var(--p400);font-size:.85rem;margin-bottom:12px;letter-spacing:2px}
-.testi p{font-size:.86rem;color:var(--g600);font-style:italic;line-height:1.72;margin-bottom:18px}
-.testi-who{display:flex;align-items:center;gap:10px}
-.ava{
-  width:36px;height:36px;border-radius:50%;flex-shrink:0;
-  background:var(--p600);display:flex;align-items:center;justify-content:center;
-  font-size:.9rem;
-}
-.ava-name{font-size:.84rem;font-weight:700;color:var(--p800)}
-.ava-role{font-size:.72rem;color:var(--g400)}
-
-/* ════════════════════════════════════════════════════
-   CTA BANNER
-════════════════════════════════════════════════════ */
+/* ── CTA BAND ────────────────────────────────────── */
 .cta-band{
-  background:linear-gradient(110deg,var(--p800) 0%,var(--p500) 100%);
-  padding:88px 0;text-align:center;
+  background:
+    linear-gradient(rgba(28,28,30,.88),rgba(28,28,30,.92)),
+    repeating-linear-gradient(90deg,transparent 0,transparent 74px,rgba(255,255,255,.03) 74px,rgba(255,255,255,.03) 76px),
+    linear-gradient(155deg,#c07040 0%,#6a2c12 100%);
+  padding:96px 0;text-align:center;
 }
-.cta-band h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;color:var(--w);margin-bottom:14px;letter-spacing:-.02em}
-.cta-band p{color:rgba(255,255,255,.68);font-size:1rem;max-width:480px;margin:0 auto 36px;line-height:1.7}
+.cta-band h2{
+  font-family:'Bebas Neue',cursive;
+  font-size:clamp(3rem,7vw,6rem);color:var(--w);letter-spacing:.04em;margin-bottom:14px;
+}
+.cta-band h2 em{font-style:normal;color:var(--clay)}
+.cta-band p{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:rgba(255,255,255,.65);margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto}
 .cta-acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-/* ════════════════════════════════════════════════════
-   FOOTER
-════════════════════════════════════════════════════ */
-footer{background:var(--p900);padding:60px 0 0}
-.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:36px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.07)}
-.footer-brand-name{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.footer-brand-name strong{font-size:.95rem;font-weight:800;color:var(--w)}
-.footer-brand-name small{font-size:.64rem;color:rgba(255,255,255,.3);letter-spacing:.07em;display:block}
-.footer-logo-wrap{width:36px;height:36px;background:rgba(255,255,255,.07);border-radius:var(--r8);display:flex;align-items:center;justify-content:center}
-.footer-logo-wrap svg{width:20px;height:20px}
-.fdesc{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.72;margin-bottom:18px}
-.fsoc{display:flex;gap:8px}
-.fsoc a{
-  width:32px;height:32px;border-radius:var(--r8);
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);
+/* ── FOOTER ──────────────────────────────────────── */
+footer{background:var(--dark);padding:72px 0 0}
+.footer-grid{
+  display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr 1.4fr;
+  gap:32px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.07);
+}
+.f-brand{}
+.f-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.f-logo svg{width:40px;height:40px}
+.f-logo strong{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--w)}
+.f-logo small{font-size:.62rem;color:var(--muted);letter-spacing:.07em;text-transform:uppercase;display:block;margin-top:2px}
+.f-desc{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.78;margin-bottom:20px;max-width:300px}
+.f-soc{display:flex;gap:8px}
+.f-soc a{
+  width:34px;height:34px;border-radius:var(--r8);
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);
   display:flex;align-items:center;justify-content:center;
-  font-size:.8rem;color:rgba(255,255,255,.45);transition:var(--ease);
+  color:rgba(255,255,255,.4);font-size:.82rem;transition:var(--ease);
 }
-.fsoc a:hover{background:var(--p600);border-color:var(--p600);color:var(--w)}
-.footer-col h5{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px}
-.footer-col ul{display:flex;flex-direction:column;gap:9px}
-.footer-col ul li a{font-size:.82rem;color:rgba(255,255,255,.5);transition:var(--ease)}
-.footer-col ul li a:hover{color:var(--w);padding-left:4px}
-.fhours{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.85}
-.fhours strong{color:var(--w)}
-.fcontact{display:flex;flex-direction:column;gap:10px}
-.fcontact a{font-size:.81rem;color:rgba(255,255,255,.5);display:flex;align-items:flex-start;gap:8px;transition:var(--ease)}
-.fcontact a:hover{color:var(--w)}
-.footer-bot{
-  padding:18px 0;
+.f-soc a:hover{background:var(--clay);border-color:var(--clay);color:var(--w)}
+.f-col h5{
+  font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.28);margin-bottom:16px;
+}
+.f-col ul{display:flex;flex-direction:column;gap:10px}
+.f-col ul li a{font-size:.82rem;color:rgba(255,255,255,.5);transition:var(--ease)}
+.f-col ul li a:hover{color:var(--clay-l);padding-left:4px}
+.f-hours{font-size:.82rem;color:rgba(255,255,255,.48);line-height:1.9}
+.f-hours strong{color:rgba(255,255,255,.8)}
+.f-contact{display:flex;flex-direction:column;gap:11px}
+.f-contact a{font-size:.8rem;color:rgba(255,255,255,.48);display:flex;align-items:flex-start;gap:9px;transition:var(--ease);line-height:1.5}
+.f-contact a:hover{color:var(--clay-l)}
+.f-contact-icon{font-size:.9rem;flex-shrink:0;margin-top:1px}
+.f-bot{
+  padding:20px 0;
   display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:8px;
-  font-size:.73rem;color:rgba(255,255,255,.25);
+  flex-wrap:wrap;gap:10px;font-size:.72rem;color:rgba(255,255,255,.22);
 }
-.footer-bot a{color:rgba(255,255,255,.32);transition:var(--ease)}
-.footer-bot a:hover{color:var(--w)}
-.fbot-links{display:flex;gap:14px;flex-wrap:wrap}
+.f-bot a{color:rgba(255,255,255,.32);transition:var(--ease)}
+.f-bot a:hover{color:var(--w)}
+.f-bot-links{display:flex;gap:14px;flex-wrap:wrap}
 
-/* ════════════════════════════════════════════════════
-   MODALS
-════════════════════════════════════════════════════ */
-.modal-overlay{
+/* ── MODALS ──────────────────────────────────────── */
+.ov{
   position:fixed;inset:0;z-index:9000;
-  background:rgba(20,8,40,.72);backdrop-filter:blur(8px);
+  background:rgba(28,28,30,.75);backdrop-filter:blur(10px);
   display:flex;align-items:center;justify-content:center;
   padding:20px;opacity:0;pointer-events:none;transition:opacity var(--ease);
 }
-.modal-overlay.on{opacity:1;pointer-events:all}
+.ov.on{opacity:1;pointer-events:all}
 .modal{
   background:var(--w);border-radius:var(--r24);padding:36px;
   max-width:460px;width:100%;position:relative;
-  transform:translateY(18px);transition:transform var(--ease);
-  box-shadow:var(--sh4);max-height:90vh;overflow-y:auto;
+  transform:translateY(20px);transition:transform var(--ease);
+  box-shadow:var(--s4);max-height:90vh;overflow-y:auto;
 }
-.modal-overlay.on .modal{transform:none}
+.ov.on .modal{transform:none}
 .modal-x{
-  position:absolute;top:16px;right:16px;
-  width:30px;height:30px;border-radius:50%;
-  background:var(--g100);border:none;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  color:var(--g600);font-size:.85rem;transition:var(--ease);
+  position:absolute;top:16px;right:16px;width:30px;height:30px;
+  border-radius:50%;background:var(--g100);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;color:var(--mid);
+  font-size:.85rem;transition:var(--ease);
 }
 .modal-x:hover{background:var(--g200)}
-.modal-head{font-size:.9rem;margin-bottom:3px}
-.modal h2{font-size:1.3rem;font-weight:800;color:var(--p800);margin-bottom:6px}
-.modal>.sub{font-size:.84rem;color:var(--g400);margin-bottom:24px;line-height:1.5}
+.modal-emo{font-size:2rem;margin-bottom:8px}
+.modal h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+.modal>.sub{font-size:.84rem;color:var(--mid);margin-bottom:24px;line-height:1.55}
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
-.fg label{font-size:.69rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--g600)}
+.fg label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--mid)}
 .fg input,.fg select,.fg textarea{
   padding:11px 13px;border:1.5px solid var(--g200);border-radius:var(--r8);
-  font-size:.88rem;font-family:inherit;outline:none;
-  color:var(--g800);background:var(--w);transition:var(--ease);
+  font-size:.88rem;font-family:inherit;outline:none;color:var(--dark);
+  background:var(--w);transition:var(--ease);
 }
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--p500);box-shadow:0 0 0 3px rgba(123,66,184,.1)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--clay);box-shadow:0 0 0 3px rgba(192,102,50,.1)}
 .fg textarea{resize:vertical;min-height:80px}
 .fg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.modal-note{font-size:.72rem;color:var(--g400);text-align:center;margin-top:10px;line-height:1.5}
+.modal-note{font-size:.72rem;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5}
 
-/* ════════════════════════════════════════════════════
-   RESPONSIVE
-════════════════════════════════════════════════════ */
+/* ── RESPONSIVE ──────────────────────────────────── */
 @media(max-width:1024px){
-  .about-grid,.padel-grid,.resto-grid,.b2b-grid{grid-template-columns:1fr;gap:44px}
-  .photo-frame{order:-1}
-  .price-row{grid-template-columns:repeat(2,1fr)}
+  .about-wrap,.book-inner{grid-template-columns:1fr;gap:44px}
+  .about-wrap{display:grid}
+  .about-img-col{order:-1}
+  .fitness-focus{grid-column:unset;grid-template-columns:1fr}
+  .ff-photo{min-height:240px}
+  .footer-grid{grid-template-columns:1fr 1fr 1fr}
+  .price-strip{grid-template-columns:repeat(2,1fr)}
   .plans{grid-template-columns:1fr}
   .plan-pop{transform:none}
-  .footer-top{grid-template-columns:1fr 1fr}
-  .stats-bar .wrap{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(2){border-right:none}
 }
 @media(max-width:768px){
-  .nav-links,.nav-cta{display:none}
+  .nav-list,.nav-cta{display:none}
   .burger{display:flex}
   .strip .wrap{grid-template-columns:repeat(2,1fr)}
-  .strip-item:nth-child(2){border-right:none}
-  .strip-item:nth-child(5){grid-column:span 2;border-right:none}
-  .acts,.ev-grid,.testi-grid{grid-template-columns:1fr}
-  .about-chips{grid-template-columns:1fr}
-  .court-grid{grid-template-columns:1fr}
-  .court-card.span2{grid-column:unset}
-  .book-inner{flex-direction:column;align-items:stretch}
+  .si:nth-child(2){border-right:none}
+  .si:nth-child(5){grid-column:span 2;border-right:none}
+  .espaces-grid{grid-template-columns:1fr}
+  .fitness-focus{grid-column:unset}
+  .ev-grid,.actu-grid,.testi-grid,.insta-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .f-bot{flex-direction:column;text-align:center}
+  .hero-numbers{gap:24px}
   .book-form{flex-direction:column}
   .bf select,.bf input{min-width:unset;width:100%}
-  .footer-top{grid-template-columns:1fr}
-  .footer-bot{flex-direction:column;text-align:center}
-  .resto-photos{grid-template-columns:1fr}
-  .rp.tall{grid-row:unset}
-  .b2b-panel{margin-top:0}
-  .price-row{grid-template-columns:1fr 1fr}
+  .nl-form{flex-direction:column}
   .fg-row{grid-template-columns:1fr}
 }
-@media(max-width:480px){
+@media(max-width:540px){
   .sec{padding:64px 0}
-  .hero h1{font-size:1.9rem}
-  .hero-actions{flex-direction:column;align-items:center}
+  .hero h1{font-size:3rem}
+  .hero-actions{flex-direction:column;align-items:flex-start}
   .hero-actions .btn{width:100%;justify-content:center}
+  .ev-grid,.actu-grid,.insta-grid{grid-template-columns:1fr}
+  .price-strip{grid-template-columns:1fr}
   .cta-acts{flex-direction:column;align-items:center}
-  .price-row{grid-template-columns:1fr}
-  .stats-bar .wrap{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .social-row{flex-direction:column}
 }
 </style>
 </head>
@@ -688,179 +676,158 @@ footer{background:var(--p900);padding:60px 0 0}
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="wrap">
-    <div class="tb-info">
+    <div class="tb-l">
       <span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Rueil-Malmaison (92) · 20 min de Paris
       </span>
       <span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Ouvert 7j/7 · 8h–23h
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Ouvert 7j/7 · 8h – 23h
       </span>
       <span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.16 12 19.79 19.79 0 011.1 3.38 2 2 0 013.09 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.16 12 19.79 19.79 0 011.1 3.38 2 2 0 013.09 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         01 47 51 XX XX
       </span>
     </div>
-    <div class="tb-social">
-      <a href="#" title="Instagram">📸</a>
-      <a href="#" title="TikTok">🎵</a>
-      <a href="#" title="LinkedIn">💼</a>
-      <a href="#" title="Facebook">👥</a>
+    <div class="tb-r">
+      <a href="https://instagram.com/tcchataigneraie" class="tb-ig" target="_blank" rel="noopener">
+        📸 @tcchataigneraie
+      </a>
     </div>
   </div>
 </div>
 
 <!-- NAVBAR -->
-<nav class="nav" id="nav">
+<nav class="navbar" id="nav">
   <div class="wrap">
-
-    <!-- Logo SVG fidèle au club -->
-    <a href="#" class="logo">
-      <svg class="logo-emblem" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M28 8C19 8 12 14.3 12 22s7 14 16 14" stroke="#7340A8" stroke-width="3" stroke-linecap="round" fill="none"/>
-        <path d="M16 36C25 36 32 29.7 32 22S25 8 16 8" stroke="#5a2d89" stroke-width="3" stroke-linecap="round" fill="none"/>
-        <circle cx="22" cy="22" r="2.5" fill="#7340A8" opacity=".5"/>
-        <circle cx="22" cy="22" r="1.2" fill="#7340A8"/>
+    <a href="#accueil" class="logo">
+      <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 8C21 8 14 14.5 14 23s7 15 16 15" stroke="#C06632" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+        <path d="M18 40C27 40 34 33.5 34 25S27 10 18 10" stroke="#1c1c1e" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+        <circle cx="24" cy="24" r="2.5" fill="#C06632" opacity=".6"/>
       </svg>
-      <div class="logo-text">
-        <strong>La Châtaigneraie</strong>
-        <small>Tennis &amp; Padel · Rueil-Malmaison</small>
+      <div>
+        <div class="logo-name">La Châtaigneraie</div>
+        <div class="logo-sub">Tennis &amp; Padel · Rueil-Malmaison</div>
       </div>
     </a>
 
-    <ul class="nav-links">
+    <ul class="nav-list">
       <li><a href="#club" class="on">Accueil</a></li>
       <li><a href="#club">Club</a></li>
       <li><a href="#tennis">Tennis</a></li>
       <li><a href="#padel">Padel</a></li>
       <li><a href="#installations">Installations</a></li>
-      <li><a href="#competitions">Compétitions</a></li>
+      <li><a href="#evenements">Événements</a></li>
+      <li><a href="#actualites">Actualités</a></li>
     </ul>
 
     <div class="nav-cta">
-      <a href="#tarifs" class="btn btn-ghost">Nos offres</a>
-      <button class="btn btn-solid" onclick="mopen('booking')">Réserver</button>
+      <a href="#tarifs" class="btn btn-outline">Nos tarifs</a>
+      <button class="btn btn-clay" onclick="mo('booking')">Réserver</button>
     </div>
 
-    <button class="burger" id="burger" aria-label="Menu">
+    <button class="burger" id="brgr" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
-
-  <!-- Mobile drawer -->
-  <div class="drawer" id="drawer">
-    <a href="#club">Accueil</a>
-    <a href="#club">Club</a>
+  <div class="drawer" id="drwr">
+    <a href="#club">Accueil / Club</a>
     <a href="#tennis">Tennis</a>
     <a href="#padel">Padel</a>
-    <a href="#installations">Installations</a>
-    <a href="#competitions">Compétitions</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#b2b">Entreprises</a>
-    <button class="btn btn-solid" onclick="mopen('booking')">Réserver un terrain</button>
+    <a href="#installations">Toutes nos installations</a>
+    <a href="#evenements">Événements</a>
+    <a href="#actualites">Actualités</a>
+    <a href="#tarifs">Tarifs &amp; Abonnements</a>
+    <a href="#contact">Contact</a>
+    <button class="btn btn-clay" onclick="mo('booking')">Réserver un terrain</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="accueil">
   <div class="hero-bg"></div>
-  <div class="hero-dome"></div>
-  <div class="hero-net"></div>
+  <div class="hero-vignette"></div>
   <div class="wrap hero-inner">
-    <div class="hero-badge">
-      <span>Fondé en 1963 · Rueil-Malmaison</span>
-    </div>
-    <h1>Bienvenue à<br/>La Châtaigneraie</h1>
-    <p class="hero-sub">Un lieu d'exception pour tous les passionnés de tennis et padel depuis 1963</p>
+    <div class="hero-tagline">Fondé en 1963 · Rueil-Malmaison · Hauts-de-Seine</div>
+    <h1>Là où les<br/><em>champions</em><br/>s'entraînent.</h1>
+    <p class="hero-sub">Un lieu d'exception pour tous les passionnés de tennis et padel depuis 60 ans.</p>
     <div class="hero-actions">
-      <button class="btn btn-solid btn-lg" onclick="mopen('booking')">Réserver un terrain</button>
-      <a href="#club" class="btn btn-ghost-w btn-lg">Découvrir le club</a>
+      <button class="btn btn-clay btn-lg" onclick="mo('booking')">Réserver un terrain</button>
+      <a href="#club" class="btn btn-outline-w btn-lg">Découvrir le club</a>
+    </div>
+    <div class="hero-numbers">
+      <div class="hn"><div class="hn-n">7</div><div class="hn-l">Courts tennis couverts</div></div>
+      <div class="hn"><div class="hn-n">4</div><div class="hn-l">Pistes padel indoor</div></div>
+      <div class="hn"><div class="hn-n">60+</div><div class="hn-l">Ans d'excellence</div></div>
+      <div class="hn"><div class="hn-n">7j/7</div><div class="hn-l">8h – 23h</div></div>
     </div>
   </div>
-  <div class="scroll-cue">
+  <div class="hero-scroll">
     <span>Découvrir</span>
     <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
 </section>
 
-<!-- QUICK STRIP -->
+<!-- STRIP -->
 <div class="strip">
   <div class="wrap">
-    <a href="#tennis" class="strip-item">
+    <a href="#tennis" class="si">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
       Tennis
     </a>
-    <a href="#padel" class="strip-item">
+    <a href="#padel" class="si">
       <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
       Padel
     </a>
-    <a href="#tarifs" class="strip-item">
-      <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-      Tarifs
-    </a>
-    <a href="#installations" class="strip-item">
+    <a href="#installations" class="si">
       <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       Installations
     </a>
-    <a href="#b2b" class="strip-item">
+    <a href="#tarifs" class="si">
+      <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      Tarifs
+    </a>
+    <a href="#b2b" class="si">
       <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
       Entreprises
     </a>
   </div>
 </div>
 
-<!-- CLUB / ABOUT -->
+<!-- QUI SOMMES-NOUS (sur la page d'accueil) -->
 <section class="sec" id="club">
   <div class="wrap">
-    <div class="about-grid">
-      <div class="photo-frame">
-        <div class="photo-main">
-          <div class="photo-caption">Courts couverts en terre battue · Rueil-Malmaison</div>
+    <div class="about-wrap">
+      <div class="about-img-col">
+        <div class="about-photo">
+          <div class="about-photo-caption">Courts couverts en terre battue · Rueil-Malmaison</div>
         </div>
-        <div class="floater">
-          <span class="floater-num">1963</span>
-          <span class="floater-lbl">Année de fondation</span>
+        <div class="about-float">
+          <div class="about-float-n">1963</div>
+          <div class="about-float-l">Fondé en</div>
         </div>
       </div>
       <div>
-        <span class="label">Le Club</span>
-        <h2 class="display">Un lieu d'exception<br/>pour tous les <em>passionnés</em></h2>
-        <div class="rule"></div>
-        <p class="body-lg" style="margin-bottom:16px">
-          Fondé en 1963, le Tennis Club de la Châtaigneraie est situé dans un cadre verdoyant
-          à Rueil-Malmaison, à seulement 20 minutes du centre de Paris.
+        <span class="eyebrow">Qui sommes-nous</span>
+        <h2 class="serif fs-lg" style="margin-bottom:6px">Une institution sportive<br/>au cœur de l'Ouest Parisien.</h2>
+        <p class="body-text" style="font-size:1rem;margin-bottom:16px">
+          Depuis plus de 60 ans, le Tennis Club de la Châtaigneraie accueille les passionnés de tennis et de padel dans un cadre verdoyant à Rueil-Malmaison, à seulement 20 minutes du centre de Paris.
         </p>
-        <p class="body-lg">
-          Avec ses 7 courts de tennis couverts en terre battue et ses 4 pistes de Padel indoor
-          haut de gamme — dont un court central panoramique — La Châtaigneraie est un véritable
-          <strong style="color:var(--p700)">lieu de vie Sport &amp; Lifestyle premium</strong>,
-          accessible 7j/7 de 8h à 23h.
+        <p class="body-text" style="font-size:1rem;margin-bottom:28px">
+          Avec <strong style="color:var(--dark);font-weight:600">7 courts de tennis couverts en terre battue</strong>, <strong style="color:var(--dark);font-weight:600">4 pistes de padel indoor</strong>, une école de tennis, un espace fitness, un club house et un restaurant panoramique — La Châtaigneraie n'est pas un club comme les autres. C'est un lieu de vie, ouvert 7j/7 de 8h à 23h.
         </p>
-        <div class="about-chips">
-          <div class="chip">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Partenaire Babolat
-          </div>
-          <div class="chip">
-            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-            Club House design
-          </div>
-          <div class="chip">
-            <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-            20 min de Paris
-          </div>
-          <div class="chip">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Ouvert 7j/7 · 8h–23h
-          </div>
-          <div class="chip">
-            <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-            Restaurant panoramique
-          </div>
-          <div class="chip">
-            <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            Espace fitness &amp; bien-être
+
+        <!-- Stars section -->
+        <div class="stars-trained">
+          <h4>⭐ Les champions y ont joué</h4>
+          <div class="stars-list">
+            <span class="star-chip">Serena Williams</span>
+            <span class="star-chip">Venus Williams</span>
+            <span class="star-chip">Jérôme Inzerillo</span>
+            <span class="star-chip">Équipe de France</span>
+            <span class="star-chip">Joueurs ATP &amp; WTA</span>
           </div>
         </div>
       </div>
@@ -868,66 +835,145 @@ footer{background:var(--p900);padding:60px 0 0}
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats-bar">
+<!-- NOS ESPACES -->
+<section class="sec bg-off" id="installations">
   <div class="wrap">
-    <div class="stats-bar .wrap">
-      <div class="wrap" style="display:grid;grid-template-columns:repeat(4,1fr)">
-        <div class="stat"><div class="stat-n">7</div><div class="stat-l">Courts de tennis couverts</div></div>
-        <div class="stat"><div class="stat-n">4</div><div class="stat-l">Pistes Padel indoor</div></div>
-        <div class="stat"><div class="stat-n">60+</div><div class="stat-l">Années d'excellence</div></div>
-        <div class="stat"><div class="stat-n">7j/7</div><div class="stat-l">8h – 23h</div></div>
-      </div>
-    </div>
-  </div>
-</div>
+    <span class="eyebrow">Nos installations</span>
+    <h2 class="serif fs-lg" style="max-width:560px;margin-bottom:8px">Un complexe sportif<br/>complet et couvert.</h2>
+    <p class="body-text" style="max-width:560px;margin-bottom:0">Chaque espace a été pensé pour offrir une expérience premium, quelle que soit la météo.</p>
 
-<!-- TENNIS -->
-<section class="sec sec-alt" id="tennis">
-  <div class="wrap">
-    <span class="label">Tennis</span>
-    <h2 class="headline">7 courts de tennis couverts en terre battue</h2>
-    <div class="rule"></div>
-    <p class="body-lg" style="max-width:620px;margin-bottom:0">
-      Un cadre sportif exceptionnel pour jouer au tennis chaque jour de 8h à 23h dans des conditions idéales,
-      régulièrement et toute l'année. Pour tous les niveaux, de tous les âges.
-    </p>
-    <div class="acts">
-      <div class="act">
-        <div class="act-img ai-clay"></div>
-        <div class="act-body">
-          <h3>Courts de compétition</h3>
-          <p>Terre battue couverte · Éclairage LED professionnel · Vestiaires premium</p>
-          <span class="price-pill">Dès 40 € / 1h30</span>
+    <div class="espaces-grid" id="tennis">
+      <!-- Tennis -->
+      <div class="espace-card">
+        <div class="ec-img">
+          <div class="ec-img-inner ec-tennis"></div>
+          <div class="ec-num">01</div>
+          <div class="ec-text-over">
+            <h3>7 courts de tennis</h3>
+            <p>Couverts en terre battue · Toute l'année</p>
+            <span class="ec-badge">Dès 40 €/1h30</span>
+          </div>
+        </div>
+        <div class="ec-body">
+          <p>Jouez comme les champions sur les mêmes courts qui ont accueilli des légendes mondiales. 7 courts couverts en terre battue, éclairés, disponibles 7j/7. Fini les annulations pour cause de pluie.</p>
+          <div class="ec-cta" onclick="mo('booking')">
+            Réserver un court
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
         </div>
       </div>
-      <div class="act">
-        <div class="act-img ai-coach"></div>
-        <div class="act-body">
-          <h3>École de Tennis</h3>
-          <p>Cours individuels &amp; collectifs · Stages enfants / adultes · Tous niveaux</p>
-          <span class="price-pill">Dès 35 € / cours</span>
+
+      <!-- Padel -->
+      <div class="espace-card" id="padel">
+        <div class="ec-img">
+          <div class="ec-img-inner ec-padel"></div>
+          <div class="ec-num">02</div>
+          <div class="ec-text-over">
+            <h3>4 pistes de padel</h3>
+            <p>Indoor · Court central panoramique</p>
+            <span class="ec-badge">Dès 50 €/1h30</span>
+          </div>
+        </div>
+        <div class="ec-body">
+          <p>Le padel qui monte. 4 pistes indoor haut de gamme dont un court central panoramique — le seul de l'Ouest Parisien. Tournois officiels P100, P250, P500. Partenaire Babolat &amp; Wilson.</p>
+          <div class="ec-cta" onclick="mo('booking')">
+            Réserver une piste
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
         </div>
       </div>
-      <div class="act">
-        <div class="act-img" style="background:linear-gradient(145deg,#1e1040,#3a1a60)"></div>
-        <div class="act-body">
-          <h3>Fitness &amp; Bien-être</h3>
-          <p>Salle de sport · Espace relaxation · Sauna · Vestiaires premium</p>
-          <span class="price-pill">Inclus abonnement Premium</span>
+
+      <!-- École de tennis -->
+      <div class="espace-card">
+        <div class="ec-img">
+          <div class="ec-img-inner ec-school"></div>
+          <div class="ec-num">03</div>
+          <div class="ec-text-over">
+            <h3>École de tennis</h3>
+            <p>Enfants · Adultes · Compétition</p>
+            <span class="ec-badge">Dès 35 €/cours</span>
+          </div>
+        </div>
+        <div class="ec-body">
+          <p>Nos entraîneurs diplômés vous accompagnent de la découverte à la compétition. Cours individuels, cours collectifs, stages vacances, préparation tournois. Pour tous les âges et tous les niveaux.</p>
+          <div class="ec-cta" onclick="mo('school')">
+            S'inscrire à l'école
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Club House -->
+      <div class="espace-card">
+        <div class="ec-img">
+          <div class="ec-img-inner ec-house"></div>
+          <div class="ec-num">04</div>
+          <div class="ec-text-over">
+            <h3>Club House &amp; Restaurant</h3>
+            <p>Vue panoramique · Terrasse estivale</p>
+          </div>
+        </div>
+        <div class="ec-body">
+          <p>Votre salon entre les sets. Restaurant avec vue sur les courts, terrasse estivale, bar et espace convivial. Un endroit où l'on vient aussi pour se retrouver, pas seulement pour jouer.</p>
+          <div class="ec-cta" onclick="mo('resto')">
+            Réserver une table
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entreprises -->
+      <div class="espace-card" id="b2b">
+        <div class="ec-img">
+          <div class="ec-img-inner ec-resto"></div>
+          <div class="ec-num">05</div>
+          <div class="ec-text-over">
+            <h3>Entreprises &amp; Séminaires</h3>
+            <p>À 20 min de La Défense</p>
+          </div>
+        </div>
+        <div class="ec-body">
+          <p>Tournoi de padel d'entreprise, séminaire, team building, privatisation du restaurant ou de la terrasse (jusqu'à 150 personnes). Offres clé en main pour les entreprises du 92 et de La Défense.</p>
+          <div class="ec-cta" onclick="mo('b2b')">
+            Demander un devis
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fitness (wide) -->
+      <div class="fitness-focus">
+        <div class="ff-photo">
+          <div class="ff-photo-bg"></div>
+          <div class="ff-caption">
+            <h3>Espace Fitness &amp; Bien-être</h3>
+            <p>Cardio · Musculation · Stretching · Sauna</p>
+          </div>
+        </div>
+        <div class="ff-content">
+          <span class="eyebrow eyebrow-w">Installation n°6</span>
+          <div class="ff-tagline">Corps et esprit<br/>au <em>sommet de leur forme.</em></div>
+          <p class="ff-body">Parce que la performance ne s'arrête pas sur le court. Notre espace fitness équipé vous permet de préparer et de récupérer comme un athlète — avec ou sans abonnement sportif.</p>
+          <div class="ff-items">
+            <div class="ff-item">Équipements cardio &amp; musculation professionnels</div>
+            <div class="ff-item">Espace stretching et mobilité</div>
+            <div class="ff-item">Sauna &amp; vestiaires premium</div>
+            <div class="ff-item">Coaching sportif sur rendez-vous</div>
+          </div>
+          <button class="btn btn-clay" onclick="mo('membre')">Accéder au fitness →</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BOOKING BAND -->
+<!-- RÉSERVATION BAND -->
 <div class="book-band">
   <div class="wrap">
     <div class="book-inner">
       <div class="book-text">
-        <h2>Réservez votre terrain en ligne</h2>
-        <p>Disponibilités en temps réel · Confirmation instantanée · Annulation flexible 24h avant</p>
+        <h2>Réservez<br/><em>en ligne.</em></h2>
+        <p>Disponibilités en temps réel · Confirmation instantanée<br/>Annulation gratuite jusqu'à 24h avant</p>
       </div>
       <div class="book-form">
         <div class="bf">
@@ -952,70 +998,82 @@ footer{background:var(--p900);padding:60px 0 0}
         </div>
         <div class="bf" style="justify-content:flex-end">
           <label>&nbsp;</label>
-          <button class="btn btn-white" onclick="mopen('booking')">Voir les disponibilités →</button>
+          <button class="btn btn-w" onclick="mo('booking')">Voir les dispos →</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PADEL -->
-<section class="sec" id="padel">
+<!-- ÉVÉNEMENTS -->
+<section class="sec" id="evenements">
   <div class="wrap">
-    <div class="padel-grid">
+    <div class="ev-header">
       <div>
-        <span class="label">Padel</span>
-        <h2 class="display">4 pistes de Padel<br/><em>indoor haut de gamme</em></h2>
-        <div class="rule"></div>
-        <p class="body-lg" style="margin-bottom:16px">
-          Le club a installé 4 pistes de Padel indoor de dernière génération, dont un
-          <strong style="color:var(--p700)">court central panoramique</strong>.
-          La Châtaigneraie est le hub incontournable du Padel dans l'Ouest Parisien.
-        </p>
-        <p class="body-lg" style="margin-bottom:24px">
-          Tournois officiels FFT, initiations, cours avec pros du circuit
-          pour tous les niveaux.
-        </p>
-        <div class="partner-badge">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--p500)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-          <div>
-            <strong>Partenaire Babolat &amp; Wilson</strong>
-            <p>Équipements disponibles · Location de raquettes sur place</p>
-          </div>
+        <span class="eyebrow">Agenda 2026</span>
+        <h2 class="serif fs-lg">Événements &amp; Compétitions</h2>
+      </div>
+      <a href="#" class="btn btn-outline">Voir tout le calendrier →</a>
+    </div>
+    <div class="ev-grid">
+      <div class="ev-card">
+        <div class="ev-img ev-i1">
+          <div class="ev-datebox"><strong>14</strong><span>Juin</span></div>
         </div>
-        <div class="tourn-row">
-          <span class="tb tb-p">🏅 P100</span>
-          <span class="tb tb-c">🥈 P250</span>
-          <span class="tb tb-p">🏆 P500</span>
-          <span class="tb tb-n">Tournois entreprises</span>
-        </div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
-          <button class="btn btn-solid" onclick="mopen('booking')">Réserver une piste</button>
-          <a href="#b2b" class="btn btn-ghost">Tournoi entreprise →</a>
+        <div class="ev-body">
+          <h3>Open Padel P500 — La Châtaigneraie</h3>
+          <p>Tournoi homologué FFT · Court central panoramique · Retransmission en direct</p>
+          <div class="ev-tags"><span class="ev-tag">P500</span><span class="ev-tag">Padel</span><span class="ev-tag">FFT</span></div>
         </div>
       </div>
-      <div class="court-grid">
-        <div class="court-card span2">
-          <div class="cc-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h4>Court Central Panoramique</h4>
-          <p>Vue 360° · Gradins · Retransmission live · Tournois officiels FFT</p>
+      <div class="ev-card">
+        <div class="ev-img ev-i2">
+          <div class="ev-datebox"><strong>21</strong><span>Juin</span></div>
         </div>
-        <div class="court-card">
-          <div class="cc-icon">🏓</div>
-          <h4>Court 2</h4>
-          <p>Indoor vitré · LED</p>
+        <div class="ev-body">
+          <h3>Fête du Club — Barbecue &amp; Tournoi Interne</h3>
+          <p>Tournoi convivial toutes catégories · Barbecue sur la terrasse · Remise des trophées</p>
+          <div class="ev-tags"><span class="ev-tag">Tennis</span><span class="ev-tag">Interne</span><span class="ev-tag">Convivial</span></div>
         </div>
-        <div class="court-card">
-          <div class="cc-icon">🏓</div>
-          <h4>Court 3</h4>
-          <p>Indoor vitré · LED</p>
+      </div>
+      <div class="ev-card">
+        <div class="ev-img ev-i3">
+          <div class="ev-datebox"><strong>28</strong><span>Juin</span></div>
         </div>
-        <div class="court-card span2">
-          <div class="cc-icon">🏓</div>
-          <h4>Court 4 — Événements &amp; Entreprises</h4>
-          <p>Privatisable · Double vitrage acoustique · Idéal soirées corporate</p>
+        <div class="ev-body">
+          <h3>Stage Été Enfants — Juillet 2026</h3>
+          <p>Stages tennis &amp; padel pour 6–17 ans · Par semaine · Moniteurs diplômés</p>
+          <div class="ev-tags"><span class="ev-tag">École</span><span class="ev-tag">Enfants</span><span class="ev-tag">Été</span></div>
+        </div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-img ev-i4">
+          <div class="ev-datebox"><strong>12</strong><span>Sept</span></div>
+        </div>
+        <div class="ev-body">
+          <h3>Corporate Padel Cup — Automne 2026</h3>
+          <p>Tournoi inter-entreprises · Privatisation · Gala dîner · Trophées</p>
+          <div class="ev-tags"><span class="ev-tag">B2B</span><span class="ev-tag">Padel</span><span class="ev-tag">Corporate</span></div>
+        </div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-img ev-i5">
+          <div class="ev-datebox"><strong>04</strong><span>Oct</span></div>
+        </div>
+        <div class="ev-body">
+          <h3>Reprise de saison — Open des membres</h3>
+          <p>Tournoi de rentrée tous niveaux · Simple &amp; double · Tennis &amp; Padel</p>
+          <div class="ev-tags"><span class="ev-tag">Tennis</span><span class="ev-tag">Padel</span><span class="ev-tag">Membres</span></div>
+        </div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-img ev-i6">
+          <div class="ev-datebox"><strong>22</strong><span>Nov</span></div>
+        </div>
+        <div class="ev-body">
+          <h3>Nuit du Padel — La Châtaigneraie</h3>
+          <p>Tournoi nocturne &amp; festif · DJ set · 4 courts en simultané · Bar ouvert</p>
+          <div class="ev-tags"><span class="ev-tag">P250</span><span class="ev-tag">Padel</span><span class="ev-tag">Nocturne</span></div>
         </div>
       </div>
     </div>
@@ -1023,382 +1081,316 @@ footer{background:var(--p900);padding:60px 0 0}
 </section>
 
 <!-- TARIFS -->
-<section class="sec sec-alt" id="tarifs">
+<section class="sec bg-off" id="tarifs">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:48px">
-      <span class="label">Tarifs 2025–2026</span>
-      <h2 class="headline">Nos formules</h2>
-      <div class="rule" style="margin:14px auto 0"></div>
+    <div class="tarifs-intro">
+      <span class="eyebrow">Tarifs 2025–2026</span>
+      <h2 class="serif fs-lg">Investissez dans<br/>votre bien-être.</h2>
+      <p class="body-text" style="margin:12px auto 0;text-align:center">Pas d'engagement contraignant. Venez à l'heure ou choisissez l'abonnement qui vous ressemble — et profitez de tout le club sans compromis.</p>
     </div>
 
-    <p style="font-size:.82rem;font-weight:700;color:var(--p600);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">
-      Location à l'heure
-    </p>
-    <div class="price-row">
+    <p style="font-size:.78rem;font-weight:700;color:var(--clay);text-transform:uppercase;letter-spacing:.12em;margin-bottom:16px">Location à l'heure · Accès direct sans abonnement</p>
+    <div class="price-strip">
       <div class="pc">
-        <div class="pc-sport">🎾</div>
+        <div class="pc-icon">🎾</div>
         <h4>Tennis · Creux</h4>
         <div class="pc-slot">Lun–Ven · 8h–17h</div>
-        <div class="pc-price">40 €</div>
+        <div class="pc-price">40€</div>
         <div class="pc-unit">par 1h30</div>
       </div>
       <div class="pc">
-        <div class="pc-sport">🎾</div>
+        <div class="pc-icon">🎾</div>
         <h4>Tennis · Plein</h4>
         <div class="pc-slot">Soirs &amp; week-ends</div>
-        <div class="pc-price">60 €</div>
+        <div class="pc-price">60€</div>
         <div class="pc-unit">par 1h30</div>
       </div>
       <div class="pc">
-        <div class="pc-sport">🏓</div>
+        <div class="pc-icon">🏓</div>
         <h4>Padel · Creux</h4>
         <div class="pc-slot">Lun–Ven · 8h–17h</div>
-        <div class="pc-price">50 €</div>
+        <div class="pc-price">50€</div>
         <div class="pc-unit">par 1h30</div>
       </div>
       <div class="pc">
-        <div class="pc-sport">🏓</div>
+        <div class="pc-icon">🏓</div>
         <h4>Padel · Plein</h4>
         <div class="pc-slot">Soirs &amp; week-ends</div>
-        <div class="pc-price">90 €</div>
+        <div class="pc-price">90€</div>
         <div class="pc-unit">par 1h30</div>
       </div>
     </div>
 
-    <p style="font-size:.82rem;font-weight:700;color:var(--p600);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">
-      Abonnements annuels
-    </p>
-    <p style="font-size:.84rem;color:var(--g400);margin-bottom:26px">Priorité de réservation · Accès vestiaires premium · Remises partenaires</p>
+    <p style="font-size:.78rem;font-weight:700;color:var(--clay);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px">Abonnements annuels · Profitez de tout, à volonté</p>
+    <p class="body-text" style="font-size:.85rem;margin-bottom:28px">Priorité de réservation · Vestiaires premium · Remises restaurant &amp; partenaires · Accès events membres</p>
     <div class="plans">
       <div class="plan">
         <h3>Essential</h3>
-        <p class="desc">Pour les joueurs occasionnels qui souhaitent profiter du club librement.</p>
-        <div class="plan-price"><span class="big">420 €</span><span class="per">/an</span></div>
+        <p class="desc">Vous jouez quand vous voulez, sans vous soucier du tarif à chaque réservation.</p>
+        <p class="plan-hook">"Idéal pour jouer 2 à 3 fois par mois en toute liberté."</p>
+        <div class="plan-price"><span class="big">420€</span><span class="per">/an</span></div>
         <ul class="plan-feats">
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès courts heures creuses</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Réservation 3 jours à l'avance</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>10 % de réduction restaurant</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Vestiaires premium</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès courts heures creuses</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Réservation jusqu'à 3j à l'avance</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>10 % de réduction restaurant</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès vestiaires premium</li>
         </ul>
-        <button class="btn btn-ghost" style="width:100%;justify-content:center" onclick="mopen('membre')">Choisir ce plan</button>
+        <button class="btn btn-outline" style="width:100%;justify-content:center" onclick="mo('membre')">Choisir Essential</button>
       </div>
       <div class="plan plan-pop">
-        <div class="pop-tag">⭐ Le plus populaire</div>
+        <div class="pop-tag">⭐ Recommandé</div>
         <h3>Premium</h3>
-        <p class="desc">Pour les joueurs réguliers qui veulent le meilleur accès et les avantages exclusifs.</p>
-        <div class="plan-price"><span class="big" style="color:var(--p500)">780 €</span><span class="per">/an</span></div>
+        <p class="desc">Accès illimité, priorité sur les meilleurs créneaux et tous les avantages du club.</p>
+        <p class="plan-hook">"Pour les joueurs réguliers qui ne veulent rien manquer."</p>
+        <div class="plan-price"><span class="big">780€</span><span class="per">/an</span></div>
         <ul class="plan-feats">
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès illimité tous créneaux</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Réservation 7 jours à l'avance</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>20 % de réduction restaurant</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>2 invités "guest" par mois</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Cours collectifs (4 / mois inclus)</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès espace fitness &amp; bien-être</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Accès illimité tous créneaux</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Réservation jusqu'à 7j à l'avance</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>20 % de réduction restaurant</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>2 invités "guest" par mois</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Cours collectifs inclus (4/mois)</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Espace fitness &amp; bien-être inclus</li>
         </ul>
-        <button class="btn btn-solid" style="width:100%;justify-content:center" onclick="mopen('membre')">S'abonner maintenant</button>
+        <button class="btn btn-clay" style="width:100%;justify-content:center" onclick="mo('membre')">S'abonner Premium</button>
       </div>
       <div class="plan">
         <h3>Corporate</h3>
-        <p class="desc">Pack entreprise pour offrir un avantage sport premium à vos équipes.</p>
-        <div class="plan-price"><span class="big" style="font-size:1.8rem">Sur devis</span></div>
+        <p class="desc">Offrez à vos équipes un avantage sport premium, un vrai levier de fidélisation RH.</p>
+        <p class="plan-hook">"5 à 50 salariés. Un seul contrat. Un club entier."</p>
+        <div class="plan-price"><span class="big" style="font-size:2rem;letter-spacing:0">Sur devis</span></div>
         <ul class="plan-feats">
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>5 à 50 salariés</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Créneaux réservés en exclusivité</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Événements B2B prioritaires</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Facturation mensuelle entreprise</li>
-          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Account manager dédié</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>De 5 à 50 salariés</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Créneaux réservés en exclusivité</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Événements B2B prioritaires</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Facturation mensuelle entreprise</li>
+          <li><span class="pf-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Responsable de compte dédié</li>
         </ul>
-        <button class="btn btn-ghost" style="width:100%;justify-content:center" onclick="mopen('b2b')">Demander un devis</button>
+        <button class="btn btn-dark" style="width:100%;justify-content:center" onclick="mo('b2b')">Demander un devis</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- B2B -->
-<section class="sec sec-dark" id="b2b">
+<!-- ACTUALITÉS -->
+<section class="sec" id="actualites">
   <div class="wrap">
-    <div class="b2b-grid">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-bottom:0">
       <div>
-        <span class="label label-dark">Entreprises &amp; Événements</span>
-        <h2 class="display display-w">Offres clé en main<br/>pour vos <em>événements corporate</em></h2>
-        <div class="rule rule-w"></div>
-        <p class="body-lg body-lg-w" style="margin-bottom:8px">
-          À 20 min de La Défense, La Châtaigneraie est le cadre idéal pour séminaires,
-          tournois d'entreprise et team building premium.
-        </p>
-        <div class="b2b-offers">
-          <div class="b2b-row">
-            <div class="b2b-ico">
-              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/><path d="M12 3v12"/><path d="M5 20h14"/></svg>
-            </div>
-            <div>
-              <h4>Tournois de Padel d'entreprise</h4>
-              <p>Organisation complète · Arbitrage professionnel · Remise de trophées · Cocktail dînatoire</p>
-            </div>
-          </div>
-          <div class="b2b-row">
-            <div class="b2b-ico">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <div>
-              <h4>Séminaires &amp; Journées d'études</h4>
-              <p>Salle équipée · Catering · Activités sportives encadrées · Terrasse privatisée</p>
-            </div>
-          </div>
-          <div class="b2b-row">
-            <div class="b2b-ico">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
-            <div>
-              <h4>Team Building Sport &amp; Lifestyle</h4>
-              <p>Initiation Padel / Tennis · Coach dédié · Restaurant privatisé · Expérience mémorable</p>
-            </div>
-          </div>
-          <div class="b2b-row">
-            <div class="b2b-ico">
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <div>
-              <h4>Hospitality &amp; Partenariats premium</h4>
-              <p>Invitations tournois · Boxes privatisées · Branding court central panoramique</p>
-            </div>
-          </div>
-        </div>
-        <button class="btn btn-white" style="margin-top:16px" onclick="mopen('b2b')">Demander un devis gratuit →</button>
+        <span class="eyebrow">Actualités du club</span>
+        <h2 class="serif fs-lg">Ce qui se passe<br/>à La Châtaigneraie.</h2>
       </div>
-      <div class="b2b-panel">
-        <h3>Pourquoi La Châtaigneraie ?</h3>
-        <p>Le lieu premium entre Rueil-Malmaison et La Défense pour vos événements corporate. Infrastructure sportive, restauration haut de gamme, accessibilité idéale.</p>
-        <div class="b2b-kpis">
-          <div class="kpi"><strong>150</strong><span>places en terrasse</span></div>
-          <div class="kpi"><strong>80</strong><span>places en salle</span></div>
-          <div class="kpi"><strong>4</strong><span>pistes Padel dispo</span></div>
-          <div class="kpi"><strong>20 min</strong><span>de La Défense</span></div>
+      <a href="#" class="btn btn-outline" style="margin-bottom:14px">Toutes les actualités →</a>
+    </div>
+    <div class="actu-grid">
+      <div class="actu-card">
+        <div class="actu-img"><div class="actu-img-bg ac-i1"></div><span class="actu-cat">Padel</span></div>
+        <div class="actu-body">
+          <h3>Notre court central panoramique élu meilleur court de padel d'Île-de-France</h3>
+          <p>Reconnu par les joueurs et les instances officielles, le court central panoramique de La Châtaigneraie s'impose comme une référence nationale.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="actu-meta">15 mai 2026</span>
+            <a href="#" class="actu-link">Lire la suite <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
         </div>
-        <button class="btn btn-solid" style="width:100%;justify-content:center" onclick="mopen('b2b')">
-          Contacter le pôle Événements
-        </button>
+      </div>
+      <div class="actu-card">
+        <div class="actu-img"><div class="actu-img-bg ac-i2"></div><span class="actu-cat">Club</span></div>
+        <div class="actu-body">
+          <h3>Ouverture de l'inscription à l'école de tennis — Saison 2026–2027</h3>
+          <p>Les inscriptions pour la nouvelle saison de l'école de tennis et de padel sont ouvertes. Places limitées, priorité aux membres.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="actu-meta">3 juin 2026</span>
+            <a href="#" class="actu-link">Lire la suite <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="actu-card">
+        <div class="actu-img"><div class="actu-img-bg ac-i3"></div><span class="actu-cat">Événement</span></div>
+        <div class="actu-body">
+          <h3>Retour sur le P500 de mai : une édition exceptionnelle</h3>
+          <p>Plus de 800 spectateurs, 3 jours de compétition, les meilleurs joueurs de la région. Le P500 de La Châtaigneraie a encore fait parler de lui.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="actu-meta">28 mai 2026</span>
+            <a href="#" class="actu-link">Lire la suite <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESTAURANT / INSTALLATIONS -->
-<section class="sec" id="installations">
+<!-- INSTAGRAM & RÉSEAUX -->
+<section class="sec insta-section">
   <div class="wrap">
-    <div class="resto-grid">
-      <div>
-        <span class="label">Restaurant &amp; Club House</span>
-        <h2 class="display">L'excellence,<br/>même <em>à table</em></h2>
-        <div class="rule"></div>
-        <p class="body-lg" style="margin-bottom:28px">
-          Un restaurant avec vue panoramique sur les courts, une terrasse estivale et un
-          Club House design pour prolonger le plaisir bien au-delà du match.
-        </p>
-        <div class="rf-list">
-          <div class="rf">
-            <div class="rf-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-            <div><h4>Vue panoramique sur les courts</h4><p>Salle principale avec vue sur les pistes de Padel et le parc verdoyant</p></div>
-          </div>
-          <div class="rf">
-            <div class="rf-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
-            <div><h4>Terrasse estivale</h4><p>Espace extérieur privatisable · Capacité jusqu'à 150 personnes</p></div>
-          </div>
-          <div class="rf">
-            <div class="rf-ico"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-            <div><h4>Cuisine &amp; Bar premium</h4><p>Menu du jour · Brunch week-end · Cocktails après-match</p></div>
-          </div>
-          <div class="rf">
-            <div class="rf-ico"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-            <div><h4>Privatisation événements</h4><p>Restaurant et terrasse disponibles pour vos soirées privées et corporate</p></div>
-          </div>
-        </div>
-        <button class="btn btn-ghost" style="margin-top:26px" onclick="mopen('resto')">Réserver une table</button>
+    <div class="insta-header">
+      <span class="eyebrow">Suivez-nous</span>
+      <h2 class="serif fs-lg" style="margin-bottom:10px">La Châtaigneraie<br/>en coulisses.</h2>
+      <a href="https://instagram.com/tcchataigneraie" target="_blank" rel="noopener" class="insta-handle">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @tcchataigneraie
+      </a>
+      <p class="insta-desc">Matchs, coulisses, événements, tips tennis &amp; padel — suivez toute la vie du club sur Instagram.</p>
+    </div>
+
+    <div class="insta-grid">
+      <div class="insta-post">
+        <div class="ip-bg ip-1"></div>
+        <div class="ip-overlay"><span class="ip-icon" style="color:white;font-size:2rem">📸</span></div>
       </div>
-      <div class="resto-photos">
-        <div class="rp rp-1 tall">🌅</div>
-        <div class="rp rp-2 short">🍽️</div>
-        <div class="rp rp-3 short">☀️</div>
+      <div class="insta-post">
+        <div class="ip-bg ip-2"></div>
+        <div class="ip-overlay"><span class="ip-icon" style="color:white;font-size:2rem">📸</span></div>
+      </div>
+      <div class="insta-post">
+        <div class="ip-bg ip-3"></div>
+        <div class="ip-overlay"><span class="ip-icon" style="color:white;font-size:2rem">📸</span></div>
+      </div>
+      <div class="insta-post">
+        <div class="ip-bg ip-4"></div>
+        <div class="ip-overlay"><span class="ip-icon" style="color:white;font-size:2rem">📸</span></div>
+      </div>
+    </div>
+
+    <div class="social-row">
+      <a href="https://instagram.com/tcchataigneraie" target="_blank" rel="noopener" class="soc-btn">📸 Instagram · @tcchataigneraie</a>
+      <a href="#" class="soc-btn">🎵 TikTok · @tcchataigneraie</a>
+      <a href="#" class="soc-btn">💼 LinkedIn · TC La Châtaigneraie</a>
+      <a href="#" class="soc-btn">👥 Facebook · TC La Châtaigneraie</a>
+    </div>
+
+    <!-- Rester informé — plusieurs canaux -->
+    <div class="stay-box">
+      <h3>Restez dans la boucle</h3>
+      <p>Actualités, événements, ouverture des inscriptions, offres membres... Choisissez comment vous souhaitez être informé(e) :</p>
+      <div class="stay-options">
+        <div class="stay-opt">📧 Newsletter email</div>
+        <div class="stay-opt">📲 Notifications SMS</div>
+        <div class="stay-opt">📸 Instagram</div>
+        <div class="stay-opt">📱 Application club</div>
+      </div>
+      <p style="font-size:.8rem;color:var(--muted);margin-bottom:14px">Inscrivez-vous à notre newsletter :</p>
+      <div class="nl-form">
+        <input type="email" placeholder="votre@email.com"/>
+        <button class="btn btn-clay">Je m'inscris →</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPÉTITIONS -->
-<section class="sec sec-alt" id="competitions">
-  <div class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:0">
-      <div>
-        <span class="label">Compétitions &amp; Agenda</span>
-        <h2 class="headline">Prochains <em style="font-style:normal;color:var(--p500)">événements</em></h2>
-      </div>
-      <a href="#" class="btn btn-ghost" style="margin-bottom:14px">Voir tout l'agenda →</a>
-    </div>
-    <div class="ev-grid">
-      <div class="ev">
-        <div class="ev-img ev-img-1">
-          <div class="ev-date-pill"><strong>14</strong><span>Juin</span></div>
-        </div>
-        <div class="ev-body">
-          <h3>Open Padel P500 — La Châtaigneraie</h3>
-          <p>Tournoi homologué FFT · Court central panoramique · Retransmission live</p>
-          <div class="ev-tags"><span class="ev-tag">P500</span><span class="ev-tag">Padel</span><span class="ev-tag">FFT</span></div>
-        </div>
-      </div>
-      <div class="ev">
-        <div class="ev-img ev-img-2">
-          <div class="ev-date-pill"><strong>28</strong><span>Juin</span></div>
-        </div>
-        <div class="ev-body">
-          <h3>Tournoi Interne Tennis — Été 2026</h3>
-          <p>Toutes catégories · Simple &amp; double · Remise des prix &amp; cocktail</p>
-          <div class="ev-tags"><span class="ev-tag">Tennis</span><span class="ev-tag">Interne</span></div>
-        </div>
-      </div>
-      <div class="ev">
-        <div class="ev-img ev-img-3">
-          <div class="ev-date-pill"><strong>12</strong><span>Sept</span></div>
-        </div>
-        <div class="ev-body">
-          <h3>Corporate Padel Cup — Automne 2026</h3>
-          <p>Tournoi inter-entreprises · Privatisation complète · Gala dîner</p>
-          <div class="ev-tags"><span class="ev-tag">B2B</span><span class="ev-tag">Padel</span><span class="ev-tag">Corporate</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="sec">
-  <div class="wrap">
-    <div style="text-align:center">
-      <span class="label">Témoignages</span>
-      <h2 class="headline">Ce que disent nos <em style="font-style:normal;color:var(--p500)">membres</em></h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p>"Le court central de padel est simplement spectaculaire. L'ambiance lors du P500 était digne des plus grands tournois. Un club enfin à la hauteur de son image."</p>
-        <div class="testi-who">
-          <div class="ava">👨</div>
-          <div><div class="ava-name">Thomas M.</div><div class="ava-role">Membre Premium · Padel</div></div>
-        </div>
-      </div>
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p>"Séminaire d'entreprise avec 60 personnes. Logistique parfaite : padel le matin, déjeuner panoramique, réunion l'après-midi. Nos équipes ont adoré."</p>
-        <div class="testi-who">
-          <div class="ava">👩</div>
-          <div><div class="ava-name">Sophie R.</div><div class="ava-role">DRH · Société du 92</div></div>
-        </div>
-      </div>
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p>"Courts de tennis en terre battue d'une qualité exceptionnelle. Et la réservation en ligne est enfin fluide — plus besoin d'appeler l'accueil !"</p>
-        <div class="testi-who">
-          <div class="ava">👨</div>
-          <div><div class="ava-name">Marc D.</div><div class="ava-role">Membre depuis 2018 · Tennis</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
+<!-- CTA FINAL -->
 <div class="cta-band">
   <div class="wrap">
-    <h2>Rejoignez la communauté<br/>La Châtaigneraie</h2>
-    <p>Plus de 1 000 membres nous font confiance. Venez découvrir pourquoi nous sommes le club de référence de l'Ouest Parisien.</p>
+    <h2>Rejoignez<br/><em>La Châtaigneraie.</em></h2>
+    <p>Venez jouer où les champions s'entraînent. Réservez votre premier terrain ou devenez membre dès aujourd'hui.</p>
     <div class="cta-acts">
-      <button class="btn btn-white btn-lg" onclick="mopen('booking')">Réserver un terrain</button>
-      <button class="btn btn-ghost-w btn-lg" onclick="mopen('membre')">Devenir membre</button>
+      <button class="btn btn-clay btn-lg" onclick="mo('booking')">Réserver un terrain</button>
+      <button class="btn btn-outline-w btn-lg" onclick="mo('membre')">Devenir membre</button>
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
-<footer>
+<footer id="contact">
   <div class="wrap">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand-name">
-          <div class="footer-logo-wrap">
-            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M28 8C19 8 12 14.3 12 22s7 14 16 14" stroke="#9460cc" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <path d="M16 36C25 36 32 29.7 32 22S25 8 16 8" stroke="#7340A8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-            </svg>
-          </div>
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="f-brand">
+        <div class="f-logo">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M30 8C21 8 14 14.5 14 23s7 15 16 15" stroke="#C06632" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M18 40C27 40 34 33.5 34 25S27 10 18 10" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-linecap="round" fill="none"/>
+          </svg>
           <div>
             <strong>La Châtaigneraie</strong>
-            <small>Tennis &amp; Padel · Rueil-Malmaison · Depuis 1963</small>
+            <small>Tennis &amp; Padel · Depuis 1963</small>
           </div>
         </div>
-        <p class="fdesc">Lieu de vie Sport &amp; Lifestyle premium de l'Ouest Parisien. Tennis couverts en terre battue, Padel indoor, restaurant panoramique. Ouvert 7j/7.</p>
-        <div class="fsoc">
-          <a href="#" title="Instagram">📸</a>
+        <p class="f-desc">Lieu de vie Sport &amp; Lifestyle premium de l'Ouest Parisien. 7 courts de tennis couverts, 4 pistes de padel indoor, restaurant panoramique, fitness, club house. Ouvert 7j/7.</p>
+        <div class="f-soc">
+          <a href="https://instagram.com/tcchataigneraie" target="_blank" rel="noopener" title="Instagram @tcchataigneraie">📸</a>
           <a href="#" title="TikTok">🎵</a>
           <a href="#" title="LinkedIn">💼</a>
           <a href="#" title="Facebook">👥</a>
         </div>
       </div>
-      <div class="footer-col">
+
+      <!-- Navigation -->
+      <div class="f-col">
         <h5>Navigation</h5>
         <ul>
-          <li><a href="#accueil">Accueil</a></li>
           <li><a href="#club">Le Club</a></li>
           <li><a href="#tennis">Tennis</a></li>
           <li><a href="#padel">Padel</a></li>
-          <li><a href="#installations">Installations</a></li>
-          <li><a href="#competitions">Compétitions</a></li>
-          <li><a href="#b2b">Entreprises</a></li>
+          <li><a href="#installations">Toutes nos installations</a></li>
+          <li><a href="#evenements">Événements</a></li>
+          <li><a href="#actualites">Actualités</a></li>
           <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#b2b">Entreprises</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+
+      <!-- Horaires -->
+      <div class="f-col">
         <h5>Horaires</h5>
-        <div class="fhours">
+        <div class="f-hours">
           <div><strong>Lundi – Vendredi</strong><br/>8h00 – 23h00</div>
           <br/>
           <div><strong>Samedi – Dimanche</strong><br/>8h00 – 23h00</div>
           <br/>
-          <div style="color:rgba(255,255,255,.25);font-size:.75rem">Jours fériés · 9h00 – 21h00</div>
+          <div style="color:rgba(255,255,255,.25);font-size:.75rem">Jours fériés : 9h00 – 21h00</div>
         </div>
       </div>
-      <div class="footer-col">
+
+      <!-- Réservation rapide -->
+      <div class="f-col">
+        <h5>Accès rapide</h5>
+        <ul>
+          <li><a href="#" onclick="mo('booking');return false">Réserver un court tennis</a></li>
+          <li><a href="#" onclick="mo('booking');return false">Réserver une piste padel</a></li>
+          <li><a href="#" onclick="mo('resto');return false">Réserver au restaurant</a></li>
+          <li><a href="#" onclick="mo('school');return false">Inscription école tennis</a></li>
+          <li><a href="#" onclick="mo('membre');return false">Devenir membre</a></li>
+          <li><a href="#" onclick="mo('b2b');return false">Offres entreprises</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="f-col">
         <h5>Contact</h5>
-        <div class="fcontact">
-          <a href="#">📍 Rueil-Malmaison (92500)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hauts-de-Seine</a>
-          <a href="tel:+33147510000">📞 01 47 51 XX XX</a>
-          <a href="mailto:contact@tcchataigneraie.com">✉️ contact@tcchataigneraie.com</a>
-          <a href="mailto:b2b@tcchataigneraie.com">🏢 b2b@tcchataigneraie.com</a>
+        <div class="f-contact">
+          <a href="#"><span class="f-contact-icon">📍</span>Rueil-Malmaison (92500)<br/>Hauts-de-Seine</a>
+          <a href="tel:+33147510000"><span class="f-contact-icon">📞</span>01 47 51 XX XX</a>
+          <a href="mailto:contact@tcchataigneraie.com"><span class="f-contact-icon">✉️</span>contact@tcchataigneraie.com</a>
+          <a href="mailto:b2b@tcchataigneraie.com"><span class="f-contact-icon">🏢</span>b2b@tcchataigneraie.com</a>
+          <a href="https://instagram.com/tcchataigneraie" target="_blank" rel="noopener"><span class="f-contact-icon">📸</span>@tcchataigneraie</a>
         </div>
-        <button class="btn btn-solid" style="width:100%;justify-content:center;margin-top:18px;font-size:.84rem" onclick="mopen('booking')">
+        <button class="btn btn-clay" style="width:100%;justify-content:center;margin-top:18px;font-size:.84rem" onclick="mo('booking')">
           Réserver maintenant
         </button>
       </div>
     </div>
-    <div class="footer-bot">
+
+    <div class="f-bot">
       <span>© 2026 Tennis Club de la Châtaigneraie · Tous droits réservés</span>
-      <div class="fbot-links">
+      <div class="f-bot-links">
         <a href="#">Mentions légales</a>
-        <a href="#">Confidentialité</a>
+        <a href="#">Politique de confidentialité</a>
         <a href="#">CGU</a>
-        <a href="#">Contactez-nous</a>
+        <a href="#">Plan du site</a>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- ════ MODALS ════ -->
+<!-- MODALS -->
 
 <!-- Réservation -->
-<div class="modal-overlay" id="m-booking" onclick="mclose(event,'booking')">
+<div class="ov" id="m-booking" onclick="oc(event,'booking')">
   <div class="modal">
-    <button class="modal-x" onclick="mcloseId('booking')">✕</button>
-    <div class="modal-head">⚡</div>
+    <button class="modal-x" onclick="mc('booking')">✕</button>
+    <div class="modal-emo">⚡</div>
     <h2>Réserver un terrain</h2>
-    <p class="sub">Disponibilités en temps réel — confirmation instantanée par SMS &amp; e-mail.</p>
+    <p class="sub">Confirmation instantanée par SMS &amp; e-mail. Annulation gratuite jusqu'à 24h avant.</p>
     <div class="fg-row">
       <div class="fg"><label>Activité</label><select><option>🎾 Tennis</option><option>🏓 Padel</option><option>👨‍🏫 Cours collectif</option></select></div>
       <div class="fg"><label>Joueurs</label><select><option>2 joueurs</option><option>3 joueurs</option><option>4 joueurs</option></select></div>
@@ -1408,101 +1400,115 @@ footer{background:var(--p900);padding:60px 0 0}
       <div class="fg"><label>Créneau</label><select><option>08:00</option><option>09:30</option><option>11:00</option><option>12:30</option><option>14:00</option><option>15:30</option><option>17:00</option><option>18:30</option><option>20:00</option><option>21:30</option></select></div>
     </div>
     <div class="fg"><label>E-mail</label><input type="email" placeholder="prenom.nom@email.com"/></div>
-    <button class="btn btn-solid" style="width:100%;justify-content:center;padding:14px;margin-top:4px">Vérifier les disponibilités →</button>
-    <p class="modal-note">Annulation gratuite jusqu'à 24h avant · Paiement sécurisé en ligne</p>
+    <button class="btn btn-clay" style="width:100%;justify-content:center;padding:14px;margin-top:4px">Vérifier les disponibilités →</button>
+    <p class="modal-note">Paiement sécurisé en ligne · CB, PayPal</p>
   </div>
 </div>
 
 <!-- B2B -->
-<div class="modal-overlay" id="m-b2b" onclick="mclose(event,'b2b')">
+<div class="ov" id="m-b2b" onclick="oc(event,'b2b')">
   <div class="modal">
-    <button class="modal-x" onclick="mcloseId('b2b')">✕</button>
-    <div class="modal-head">🏢</div>
-    <h2>Demande B2B &amp; Événement</h2>
-    <p class="sub">Notre pôle événementiel vous répond sous 24h avec une offre personnalisée.</p>
+    <button class="modal-x" onclick="mc('b2b')">✕</button>
+    <div class="modal-emo">🏢</div>
+    <h2>Offre entreprise</h2>
+    <p class="sub">Notre équipe vous rappelle sous 24h avec une offre personnalisée.</p>
     <div class="fg"><label>Société</label><input type="text" placeholder="Votre entreprise"/></div>
     <div class="fg-row">
       <div class="fg"><label>Contact</label><input type="text" placeholder="Prénom Nom"/></div>
       <div class="fg"><label>Email pro</label><input type="email" placeholder="contact@societe.com"/></div>
     </div>
     <div class="fg-row">
-      <div class="fg"><label>Type d'événement</label><select><option>Tournoi Padel entreprise</option><option>Séminaire</option><option>Team Building</option><option>Privatisation restaurant</option><option>Autre</option></select></div>
+      <div class="fg"><label>Type d'événement</label><select><option>Tournoi Padel entreprise</option><option>Séminaire</option><option>Team Building</option><option>Privatisation restaurant</option><option>Abonnement Corporate</option></select></div>
       <div class="fg"><label>Participants</label><select><option>Moins de 20</option><option>20 – 50</option><option>50 – 100</option><option>+ de 100</option></select></div>
     </div>
-    <div class="fg"><label>Message</label><textarea placeholder="Dates souhaitées, besoins spécifiques..."></textarea></div>
-    <button class="btn btn-solid" style="width:100%;justify-content:center;padding:14px">Envoyer ma demande →</button>
+    <div class="fg"><label>Précisez votre projet</label><textarea placeholder="Dates souhaitées, besoins spécifiques..."></textarea></div>
+    <button class="btn btn-clay" style="width:100%;justify-content:center;padding:14px">Envoyer ma demande →</button>
   </div>
 </div>
 
 <!-- Restaurant -->
-<div class="modal-overlay" id="m-resto" onclick="mclose(event,'resto')">
+<div class="ov" id="m-resto" onclick="oc(event,'resto')">
   <div class="modal">
-    <button class="modal-x" onclick="mcloseId('resto')">✕</button>
-    <div class="modal-head">🍽️</div>
+    <button class="modal-x" onclick="mc('resto')">✕</button>
+    <div class="modal-emo">🍽️</div>
     <h2>Réserver une table</h2>
-    <p class="sub">Restaurant panoramique ouvert 7j/7, déjeuner et dîner.</p>
+    <p class="sub">Restaurant panoramique ouvert 7j/7, déjeuner et dîner. Vue sur les courts.</p>
     <div class="fg-row">
       <div class="fg"><label>Date</label><input type="date"/></div>
-      <div class="fg"><label>Couverts</label><select><option>1–2</option><option>3–4</option><option>5–8</option><option>Groupe (+8)</option></select></div>
+      <div class="fg"><label>Couverts</label><select><option>1 – 2</option><option>3 – 4</option><option>5 – 8</option><option>Groupe (+8)</option></select></div>
     </div>
     <div class="fg-row">
       <div class="fg"><label>Service</label><select><option>Déjeuner (12h–14h30)</option><option>Dîner (19h–22h30)</option><option>Brunch week-end (11h–15h)</option></select></div>
       <div class="fg"><label>Téléphone</label><input type="tel" placeholder="06 XX XX XX XX"/></div>
     </div>
-    <button class="btn btn-solid" style="width:100%;justify-content:center;padding:14px">Confirmer la réservation →</button>
+    <button class="btn btn-clay" style="width:100%;justify-content:center;padding:14px">Confirmer →</button>
+  </div>
+</div>
+
+<!-- École tennis -->
+<div class="ov" id="m-school" onclick="oc(event,'school')">
+  <div class="modal">
+    <button class="modal-x" onclick="mc('school')">✕</button>
+    <div class="modal-emo">👨‍🏫</div>
+    <h2>École de Tennis &amp; Padel</h2>
+    <p class="sub">Cours individuels, collectifs, stages vacances. Tous âges, tous niveaux.</p>
+    <div class="fg-row">
+      <div class="fg"><label>Prénom</label><input type="text"/></div>
+      <div class="fg"><label>Âge / Niveau</label><select><option>Enfant – Débutant</option><option>Enfant – Intermédiaire</option><option>Adulte – Débutant</option><option>Adulte – Intermédiaire</option><option>Adulte – Avancé</option></select></div>
+    </div>
+    <div class="fg"><label>Type de cours</label><select><option>Cours individuel</option><option>Cours collectif</option><option>Stage vacances</option><option>Préparation compétition</option></select></div>
+    <div class="fg"><label>E-mail</label><input type="email" placeholder="prenom.nom@email.com"/></div>
+    <button class="btn btn-clay" style="width:100%;justify-content:center;padding:14px">M'inscrire →</button>
   </div>
 </div>
 
 <!-- Membre -->
-<div class="modal-overlay" id="m-membre" onclick="mclose(event,'membre')">
+<div class="ov" id="m-membre" onclick="oc(event,'membre')">
   <div class="modal">
-    <button class="modal-x" onclick="mcloseId('membre')">✕</button>
-    <div class="modal-head">🌳</div>
+    <button class="modal-x" onclick="mc('membre')">✕</button>
+    <div class="modal-emo">🌳</div>
     <h2>Devenir membre</h2>
-    <p class="sub">Rejoignez la communauté et profitez des avantages exclusifs La Châtaigneraie.</p>
+    <p class="sub">Rejoignez plus de 1 000 membres et profitez de tout le club sans restriction.</p>
     <div class="fg-row">
       <div class="fg"><label>Prénom</label><input type="text"/></div>
       <div class="fg"><label>Nom</label><input type="text"/></div>
     </div>
     <div class="fg"><label>E-mail</label><input type="email" placeholder="prenom.nom@email.com"/></div>
-    <div class="fg"><label>Formule souhaitée</label><select><option>Essential — 420 €/an</option><option>Premium — 780 €/an ⭐</option><option>Corporate — Sur devis</option></select></div>
-    <div class="fg"><label>Activité principale</label><select><option>Tennis</option><option>Padel</option><option>Tennis &amp; Padel</option></select></div>
-    <button class="btn btn-solid" style="width:100%;justify-content:center;padding:14px">Commencer mon inscription →</button>
-    <p class="modal-note">Notre équipe vous contactera pour finaliser votre adhésion.</p>
+    <div class="fg"><label>Formule</label><select><option>Essential — 420 €/an</option><option>Premium — 780 €/an ⭐</option><option>Corporate — Sur devis</option></select></div>
+    <div class="fg"><label>Activité principale</label><select><option>Tennis</option><option>Padel</option><option>Tennis &amp; Padel</option><option>Fitness uniquement</option></select></div>
+    <button class="btn btn-clay" style="width:100%;justify-content:center;padding:14px">Commencer mon inscription →</button>
+    <p class="modal-note">Notre équipe vous contactera pour finaliser votre adhésion sous 48h.</p>
   </div>
 </div>
 
-<!-- ════ SCRIPTS ════ -->
 <script>
-// Navbar raise
+// Navbar scroll
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('raised',scrollY>24));
+window.addEventListener('scroll',()=>nav.classList.toggle('up',scrollY>20));
 
 // Burger
-const burger=document.getElementById('burger'),drawer=document.getElementById('drawer');
-burger.addEventListener('click',()=>drawer.classList.toggle('open'));
-drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open')));
+const brgr=document.getElementById('brgr'),drwr=document.getElementById('drwr');
+brgr.addEventListener('click',()=>drwr.classList.toggle('open'));
+drwr.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drwr.classList.remove('open')));
 
 // Modals
-function mopen(id){document.getElementById('m-'+id).classList.add('on');document.body.style.overflow='hidden'}
-function mcloseId(id){document.getElementById('m-'+id).classList.remove('on');document.body.style.overflow=''}
-function mclose(e,id){if(e.target===document.getElementById('m-'+id))mcloseId(id)}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.on').forEach(el=>el.classList.remove('on'));document.body.style.overflow=''}});
+function mo(id){document.getElementById('m-'+id).classList.add('on');document.body.style.overflow='hidden'}
+function mc(id){document.getElementById('m-'+id).classList.remove('on');document.body.style.overflow=''}
+function oc(e,id){if(e.target===document.getElementById('m-'+id))mc(id)}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.ov.on').forEach(el=>el.classList.remove('on'));document.body.style.overflow=''}});
 
-// Default date
+// Default date = today
 const t=new Date().toISOString().split('T')[0];
 document.querySelectorAll('input[type=date]').forEach(el=>{el.value=t;el.min=t});
 
-// Active nav link on scroll
+// Active nav on scroll
 const secs=[...document.querySelectorAll('section[id]')];
-const navAs=[...document.querySelectorAll('.nav-links a')];
+const nas=[...document.querySelectorAll('.nav-list a')];
 const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
-    if(e.isIntersecting){
-      navAs.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
-    }
+    if(e.isIntersecting) nas.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
   });
-},{threshold:.4});
+},{threshold:.35});
 secs.forEach(s=>io.observe(s));
 </script>
 </body>
