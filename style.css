@@ -183,7 +183,7 @@ button{font-family:inherit;cursor:pointer;border:none}
 .hero-bg{
   position:absolute;inset:0;
   background:
-    url('https://i.ibb.co/yBYhgpL0/6d6084-37c8364bb4624846bd39ad98a26a9804-mv2.avif') center/cover no-repeat,
+    url('courts.webp') center/cover no-repeat,
     linear-gradient(155deg,#c07040,#5a1a08);
   opacity:.52;
 }
